@@ -129,7 +129,7 @@ To customize colors, modify the RGB values in the LaTeX templates in `generator.
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Creative Commons Attribution-NonCommercial (CC BY-NC) license - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
@@ -147,4 +147,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, please open an issue in the GitHub repository or contact [myagdichha@gmail.com](mailto:myagdichha@gmail.com).
+For support, please open an issue in the GitHub repository or contact [myagdichhantyal@gmail.com](mailto:myagdichhantyal@gmail.com).
