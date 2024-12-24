@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 from resume.generator import ResumeGenerator
 from coverletter.generator import CoverLetterGenerator
@@ -34,7 +35,8 @@ def main():
     coverletter_generator = CoverLetterGenerator(coverletter_yml)
     
     # Create output directory with company name
-    output_dir = os.path.join(base_dir, "output", company_name)
+    output_dir = os.path.join(base_dir, "output", company_name, datetime.now().strftime("%Y%m%d_%H%M%S"))
+
     os.makedirs(output_dir, exist_ok=True)
 
     job_description = None
