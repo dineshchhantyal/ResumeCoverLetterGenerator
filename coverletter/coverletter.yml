@@ -16,20 +16,20 @@ personal_information:
 
 recipient:
   name: "[Hiring Manager's Name]"
-  address: "[Company Name] \n[Company Address]"
+  address: "Manulife \nBoston, Massachusetts"
 
 letter:
   date: "[Current Date]"
   opening: "Dear Hiring Manager,"
   body: |
-    As a Computer Science student at the University of Louisiana at Monroe maintaining a 4.0 GPA, I am excited to apply for the Software Engineer position at [Company Name]. With hands-on experience in full-stack development and a track record of delivering impactful solutions, I am confident in my ability to contribute to your engineering team.
+    I am writing to express my interest in the Investment Analyst Intern position at Manulife for Summer 2025. As a Computer Science student at the University of Louisiana at Monroe maintaining a 4.0 GPA, I am eager to apply my skills in financial modeling and investment analysis in a dynamic and global environment.
 
-    In my current role as a Web Developer at ULM, I've demonstrated my ability to tackle complex challenges by creating a reusable PHP Drupal module that integrates with Microsoft Teams API, significantly improving student collaboration. I also engineered an ETL pipeline that migrated over 10,000 records while optimizing data structures, resulting in a 15% improvement in query speed. These experiences showcase my capability to deliver efficient, scalable solutions while maintaining high-quality standards.
+    My hands-on experience in full-stack development and my role as a Web Developer at ULM have equipped me with strong analytical and problem-solving skills. I have successfully created a reusable PHP Drupal module that integrates with Microsoft Teams API, significantly improving student collaboration. Additionally, I engineered an ETL pipeline that migrated over 10,000 records while optimizing data structures, resulting in a 15% improvement in query speed. These experiences demonstrate my ability to deliver efficient, scalable solutions while maintaining high-quality standards.
 
-    My experience at Clamphook, where I enhanced a Computer-Based Testing platform to support 5,000 concurrent users and implemented a reward system that boosted student engagement by 30%, reflects my ability to build robust, user-centric applications. Additionally, my involvement as President of the Google Developer Group at ULM and achievement as State Champion in the ICPC NA South Division 2024 demonstrates my leadership abilities and strong problem-solving skills.
+    At Clamphook, I enhanced a Computer-Based Testing platform to support 5,000 concurrent users and implemented a reward system that boosted student engagement by 30%. My leadership abilities are further evidenced by my role as President of the Google Developer Group at ULM and my achievement as State Champion in the ICPC NA South Division 2024.
 
-    I am particularly drawn to [Company Name]'s commitment to [specific company value/project/technology] and believe my experience with [relevant technologies from the job description] aligns perfectly with your technical requirements. I am excited about the opportunity to bring my technical expertise, problem-solving abilities, and collaborative spirit to your team.
+    I am particularly drawn to Manulife's commitment to innovation and inclusion. I am confident that my proficiency in financial modeling, extensive financial analysis, and familiarity with accounting principles align perfectly with your technical requirements. I am excited about the opportunity to contribute to your team and support strategic initiatives through detailed financial models and investment analysis.
 
-    Thank you for considering my application. I look forward to discussing how I can contribute to [Company Name]'s continued success.
+    Thank you for considering my application. I look forward to discussing how I can contribute to Manulife's continued success.
   closing: "Best regards"
   enclosure: "Resume"

@@ -44,6 +44,8 @@ class CoverLetterGenerator(DocumentGenerator):
         """
         # Deep copy the data to avoid modifying the original
         data = self.data.copy()
+
+        # add % must be replaced with \%
         
         # Check and prompt only for placeholders that exist in the data
         if '[Hiring Manager\'s Name]' in data['recipient']['name']:

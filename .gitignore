@@ -1,1 +1,5 @@
 output/
+/coverletter/coverletter.yml
+/resume/resume.yml
+
+.DS_Store

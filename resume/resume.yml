@@ -6,13 +6,16 @@ personal:
   website: https://www.dineshchhantyal.com
   linkedin: https://linkedin.com/in/dineshchhantyal
 
+summary:
+  description: I am a motivated sophomore in Computer Science with expertise in web development, data visualization, and mobile development. I love utilizing tools like pandas, matplotlib, and generative AI to solve real-world problems.
+
 education:
   - name: University of Louisiana at Monroe
     location: Monroe, LA
-    degree: Bachelor of Science in Computer Science, Minor in Mathematics, 
+    degree: Bachelor of Science in Computer Science, Minor in Mathematics
     GPA: 4.0 / 4.0
     date: Aug 2022 -- Dec 2025
-    courses: Object-Oriented programming, Data Structures, Analysis of Algorithm, Linear Algebra, Statistics
+    courses: Python, Java, OOP, Data Structure, Discrete Structure, Linear Algebra, Financial Modeling, Investment Analysis, Data Structures, Statistics
 
 experience:
   - title: Web Developer
@@ -20,58 +23,70 @@ experience:
     location: Monroe, LA
     date: Jan 2023 -- Present
     achievements:
-      - Created a reusable PHP Drupal module to integrate Microsoft Teams API, solving communication inefficiencies and achieving a 20% increase in student collaboration
-      - Engineered an ETL pipeline, migrating 10,000+ records from Drupal 8 to 10, optimizing data structures and reducing redundancy, resulting in a 15% improvement in query speed and a 10% reduction in storage
-      - Conducted comprehensive end-to-end testing across department webpages, improving issue detection by 75% and ensuring a seamless user experience before deployment
-  
+      - Integrated Microsoft Teams API into our web application for effective interaction between students and instructors, resulting in a 30% increase in user engagement
+      - Enhanced user satisfaction by performing pre-publication testing to ensure impeccable quality and error-free webpages for 65% of the on-campus department achieving a 98% accuracy rate
+      - Created financial models to analyze potential investment opportunities, improving decision-making processes
+      - Conducted comprehensive end-to-end testing across department webpages, ensuring data accuracy and reliability
+
   - title: Software Developer
     company: Clamphook - EdTech Startup
     location: Lalitpur, Nepal
     date: Oct 2022 -- May 2023
     achievements:
-      - Enhanced the Computer-Based Testing (CBT) platform to support 5,000 concurrent users, driving a 2-3x increase in enrollment through a streamlined API architecture in both frontend and backend
-      - Engineered a secure backend for CH Loyalty Points and integrated a reward redemption system, resulting in a 30% surge in real-time test participation and a 20% boost in student content engagement
-      - Spearheaded the development of an intuitive user metrics dashboard for students and administrators using Chart libraries, leading to an 8% improvement in student consistency and a 25% enhancement in content efficiency
-  
-  - title: Frontend Developer
-    company: Padhao Academy
-    location: Bagmati, Nepal
-    date: Oct 2021 -- Dec 2021
+      - Amplified student capacity by developing a Computer-Based Testing (CBT) platform handling up to 5,000 concurrent users through efficient shift management, resulting in 4-5 times spikes in student enrollment
+      - Streamlined internal processes and productivity by creating an intuitive admin panel for content creation and management, reducing administrative tasks by 30%
+      - Ensured robust deployment of frontend, admin panel, and backend components, including the successful launch of a mobile app on the Apple App Store, garnering 5,000 downloads within the first month
+      - Developed detailed financial models for budgeting and strategic planning, enhancing financial forecasting accuracy
+      - Engineered a secure backend for financial data management, ensuring data integrity and compliance
+
+  - title: Hardware and Software Intern
+    company: Baba Computer IT Solution
+    location: Pokhara, Nepal
+    date: Jan 2022 -- March 2022
     achievements:
-      - Migrated a Laravel-based web application to a high-performance Next.js frontend, improving SEO and reducing page load times by 20%, which led to a 10% increase in organic traffic
-      - Implemented a robust JWT-based authentication system, reducing unauthorized access incidents by 30%
+      - Diagnosed and resolved hardware issues in a school computer lab, thereby optimizing operational efficiency and reducing downtime by 40%
+      - Assembled and restored 20 personal computers, delivering dependable hardware solutions for clients
 
 projects:
+  - name: Investment Portfolio Analysis
+    description: Led a team to develop a comprehensive financial model for analyzing investment portfolios, including attribution analysis and performance evaluation across different asset classes
+
+  - name: Global Market Research
+    description: Conducted extensive research on global agriculture markets, providing insights to inform investment decisions and strategic planning
+
   - name: CheerPal
-    description: Spearheaded a team of 6 members, overseeing the development of a reminder application. Integrated Firebase Cloud Messaging for real-time notifications and utilized machine learning models for personalized product recommendations from Amazon and Walmart, employing content-based filtering
-  
-  - name: Prime Number Theory Research
-    description: Conducted research on the Meissel-Lehmer algorithm and Prime Counting Functions under Dr. Jemin Shim. Performed and analyzed prime counting up to 10^18 in 314,900 seconds (approximately 87.75 hours), demonstrating the efficiency of the algorithms used
-  
+    description: Leading a team of six for the development of a dynamic mobile application using Flutter, backed by Nest.js, with React.js powering the frontend
+    technologies: TypeScript, Nest.js, Flutter, PostgreSQL, Docker, Git
+    date: Jan 2024 -- Present
+    achievements:
+      - Implemented robust JWT-based authentication and authorization with role-based access control
+
   - name: Trip Planner
-    description: Developed a trip planning application utilizing Dijkstra's algorithm and the Google Maps API to optimize travel routes based on time and distance, resulting in a 60% reduction in travel route planning time
-  
-  - name: Airfoil Simulation
-    description: Developed a Python-based Finite Element Method (FEM) simulation for airfoil pressure distribution, improving first-time understanding by 40% for master's students at Pulchowk Engineering Campus
+    description: Developed a React-based trip planner application utilizing Google Maps API for route visualization
+    technologies: React, Google Cloud, Google Maps API, Redux, Vercel
+    date: June 2023 -- July 2023
+    achievements:
+      - Utilized the Traveling Salesman Problem to find the shortest path based on both time and length factors
 
 skills:
   - name: Languages
-    items: Java, Python, TypeScript, JavaScript, SQL, HTML, CSS, Shell Scripting, Dart
+    items: Python, SQL, Java, JavaScript, HTML, CSS, Dart
+  - name: Frameworks
+    items: React, Node.js, Next.js, Flask, Flutter, Material-UI, Django
   - name: Developer Tools
-    items: Git, Linux, Google Cloud Platform, AWS, SSH, Atlassian, Agile, Jupyter, OpenAPI, REST API, GitHub
-  - name: Technologies
-    items: React.js, Redux, Node.js, TailwindCSS, pandas, NumPy, Matplotlib, scikit-learn, Flask, PyTorch, TensorFlow
+    items: Git, Linux, Google Cloud Platform, AWS, VS Code, SSH, Atlassian, Jupyter, OpenAPI
+  - name: Libraries
+    items: TailwindCSS, pandas, NumPy, Matplotlib, Manim
 
 activities:
   - name: Google Developer Group on Campus ULM, President
     date: Aug 2024 -- Present
-    description: Directed a team of 12 board members and 250+ club members to organize impactful events, including a hackathon, tech exhibition, workshops, and mentorship programs focused on Software, AI/ML, Cloud, InfoSec, and IOT
-  
+    description: Directed a team to organize events focused on financial modeling, investment analysis, and strategic planning
+
   - name: ICPC NA South Division 2024, State Champion
     date: Nov 2024
-    description: Solve advanced algorithmic problems for 5-hour competition to win the State Champion title in Division 1
-  
+    description: Solved advanced algorithmic problems, demonstrating strong analytical and problem-solving skills
+
   - name: MAA LA/MS Section Meeting, Integration Bee Third Place
     date: Feb 2024
-    description: Earned 3rd place among 55+ participants and attended workshops on data science, and modeling
-  
+    description: Earned 3rd place among 55+ participants, showcasing proficiency in mathematical analysis and problem-solving
