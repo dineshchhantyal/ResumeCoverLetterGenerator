@@ -1,5 +1,7 @@
 output/
-/coverletter/coverletter.yml
-/resume/resume.yml
 
 .DS_Store
+
+# Ignore resume and cover letter files
+resume/resume.yml
+coverletter/coverletter.yml
