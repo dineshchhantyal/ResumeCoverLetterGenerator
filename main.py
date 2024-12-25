@@ -35,7 +35,7 @@ def main():
     coverletter_generator = CoverLetterGenerator(coverletter_yml)
     
     # Create output directory with company name
-    output_dir = os.path.join(base_dir, "output", company_name, datetime.now().strftime("%Y%m%d_%H%M%S"))
+    output_dir = os.path.join(base_dir, "output", company_name, datetime.now().strftime("%b%d%Y").upper())
 
     os.makedirs(output_dir, exist_ok=True)
 

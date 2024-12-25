@@ -8,7 +8,8 @@ class ResumeGenerator(DocumentGenerator):
     def __init__(self, yaml_file):
         super().__init__(yaml_file)
         self.latex_preamble = self.get_latex_preamble()
-        self.data = yaml.safe_load(yaml_file)
+        with open(yaml_file, 'r', encoding='utf-8') as f:
+            self.data = yaml.safe_load(f)
 
     def get_latex_preamble(self):
         """Returns the LaTeX preamble with all package imports and custom commands"""
@@ -80,16 +81,16 @@ class ResumeGenerator(DocumentGenerator):
         
         # Define replacements in order of precedence
         replacements = [
-            ('\\', '\\textbackslash{}'),
+            # ('\\', '\\textbackslash{}'),
             ('&', '\\&'),
             ('%', '\\%'),
-            ('$', '\\$'),
+            # ('$', '\\$'),
             ('#', '\\#'),
             ('_', '\\_'),
-            ('{', '\\{'),
-            ('}', '\\}'),
+            # ('{', '\\{'),
+            # ('}', '\\}'),
             ('~', '\\textasciitilde{}'),
-            ('^', '\\textasciicircum{}'),
+            # ('^', '\\textasciicircum{}'),
             ('<', '\\textless{}'),
             ('>', '\\textgreater{}'),
             ('|', '\\textbar{}'),
@@ -196,20 +197,19 @@ class ResumeGenerator(DocumentGenerator):
 
     def generate_resume(self, yaml_file):
         """Generate the complete LaTeX resume from YAML"""
-        with open(yaml_file, 'r', encoding='utf-8') as f:
-            data = yaml.safe_load(f)
-        
+     
         content = [
             self.latex_preamble,
             "\\begin{document}",
-            self.generate_header(data['personal']),
-            self.generate_education(data['education']),
-            self.generate_experience(data['experience']),
-            self.generate_projects(data['projects']),
-            self.generate_skills(data['skills']),
-            self.generate_activities(data['activities']),
+            self.generate_header(self.data.get('personal', {})),
+            self.generate_education(self.data.get('education', [])),
+            self.generate_experience(self.data.get('experience', [])),
+            self.generate_projects(self.data.get('projects', [])),
+            self.generate_skills(self.data.get('skills', [])),
+            self.generate_activities(self.data.get('activities', [])),
             "\\end{document}"
         ]
+
         
         return '\n\n'.join(content)
 
@@ -217,14 +217,16 @@ class ResumeGenerator(DocumentGenerator):
         """Save the generated LaTeX resume to a file"""
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
-            
+        
+
         latex_content = self.generate_resume(yaml_file)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_file = os.path.join(output_dir, f"resume_{timestamp}.tex")
         
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(latex_content)
-            
+        
+
         return output_file
     
     def compile_pdf(self, tex_file):
@@ -271,8 +273,11 @@ class ResumeGenerator(DocumentGenerator):
             
             # Then compile it to PDF
             pdf_file = self.compile_pdf(tex_file)
+
+            # delete the tex file
+            os.remove(tex_file)
             
-            return tex_file, pdf_file
+            return pdf_file
             
         except Exception as e:
             print(f"Failed to generate PDF: {str(e)}")
@@ -289,7 +294,5 @@ if __name__ == "__main__":
     try:
         generator = ResumeGenerator()
         tex_file, pdf_file = generator.generate_pdf("resume.yml")
-        print(f"LaTeX file generated: {tex_file}")
-        print(f"PDF file generated: {pdf_file}")
     except Exception as e:
         print(f"Failed to generate resume: {str(e)}")

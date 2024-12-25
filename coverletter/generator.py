@@ -46,6 +46,7 @@ class CoverLetterGenerator(DocumentGenerator):
         data = self.data.copy()
 
         # add % must be replaced with \%
+        data['letter']['body'] = data['letter']['body'].replace('%', '\\%')
         
         # Check and prompt only for placeholders that exist in the data
         if '[Hiring Manager\'s Name]' in data['recipient']['name']:
@@ -203,10 +204,14 @@ class CoverLetterGenerator(DocumentGenerator):
         try:
             tex_file = self.save_cover_letter(yaml_file, output_dir, company_name)
             
+            
             # Then compile it to PDF
             pdf_file = self.compile_pdf(tex_file, output_dir)
+
+            # delete tex file
+            os.remove(tex_file)
             
-            return tex_file, pdf_file
+            return pdf_file
         except Exception as e:
             print(f"Failed to generate PDF: {str(e)}")
             raise

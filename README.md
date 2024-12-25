@@ -73,25 +73,25 @@ python main.py
 
 ```yaml
 personal:
-name: Your Name
-email: your.email@example.com
-phone: "+1 (123) 456-7890"
-website: https://yourwebsite.com
-linkedin: https://linkedin.com/in/yourprofile
+   name: Your Name
+   email: your.email@example.com
+   phone: "+1 (123) 456-7890"
+   website: https://yourwebsite.com
+   linkedin: https://linkedin.com/in/yourprofile
 education:
-name: University Name
-location: City, State
-degree: Degree Name
-date: Graduation Date
-courses: Relevant Coursework
+   name: University Name
+   location: City, State
+   degree: Degree Name
+   date: Graduation Date
+   courses: Relevant Coursework
 experience:
-title: Job Title
-company: Company Name
-location: City, State
-date: Employment Period
+   title: Job Title
+   company: Company Name
+   location: City, State
+   date: Employment Period
 achievements:
-Achievement 1
-Achievement 2
+   Achievement 1
+   Achievement 2
 ```
 
 ### Cover Letter YAML Structure
