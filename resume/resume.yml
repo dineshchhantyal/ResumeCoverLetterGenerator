@@ -23,10 +23,9 @@ experience:
     location: Monroe, LA
     date: Jan 2023 -- Present
     achievements:
-      - Integrated Microsoft Teams API into our web application for effective interaction between students and instructors, resulting in a 30% increase in user engagement
-      - Enhanced user satisfaction by performing pre-publication testing to ensure impeccable quality and error-free webpages for 65% of the on-campus department achieving a 98% accuracy rate
-      - Created financial models to analyze potential investment opportunities, improving decision-making processes
-      - Conducted comprehensive end-to-end testing across department webpages, ensuring data accuracy and reliability
+      - Created a reusable PHP Drupal module to integrate Microsoft Teams API, solving communication inefficiencies and achieving a 20% increase in student collaboration
+      - Engineered an ETL pipeline, migrating 10,000+ records from Drupal 8 to 10, optimizing data structures and reducing redundancy, resulting in a 15% improvement in query speed and a 10% reduction in storage
+      - Conducted comprehensive end-to-end testing across department webpages, improving issue detection by 75% and ensuring a seamless user experience before deployment
 
   - title: Software Developer
     company: Clamphook - EdTech Startup
@@ -34,10 +33,8 @@ experience:
     date: Oct 2022 -- May 2023
     achievements:
       - Amplified student capacity by developing a Computer-Based Testing (CBT) platform handling up to 5,000 concurrent users through efficient shift management, resulting in 4-5 times spikes in student enrollment
-      - Streamlined internal processes and productivity by creating an intuitive admin panel for content creation and management, reducing administrative tasks by 30%
-      - Ensured robust deployment of frontend, admin panel, and backend components, including the successful launch of a mobile app on the Apple App Store, garnering 5,000 downloads within the first month
-      - Developed detailed financial models for budgeting and strategic planning, enhancing financial forecasting accuracy
-      - Engineered a secure backend for financial data management, ensuring data integrity and compliance
+      - Ensured robust deployment of frontend, admin panel, and backend components using Docker, including the successful launch of a mobile app on the Apple App Store, garnering 5,000 downloads within the first month
+      - Spearheaded the development of an intuitive user metrics dashboard for students and administrators using Chart libraries, leading to an 8% improvement in student consistency and a 25% enhancement in content efficiency
 
   - title: Hardware and Software Intern
     company: Baba Computer IT Solution
@@ -48,35 +45,35 @@ experience:
       - Assembled and restored 20 personal computers, delivering dependable hardware solutions for clients
 
 projects:
-  - name: Investment Portfolio Analysis
-    description: Led a team to develop a comprehensive financial model for analyzing investment portfolios, including attribution analysis and performance evaluation across different asset classes
-
-  - name: Global Market Research
-    description: Conducted extensive research on global agriculture markets, providing insights to inform investment decisions and strategic planning
-
   - name: CheerPal
-    description: Leading a team of six for the development of a dynamic mobile application using Flutter, backed by Nest.js, with React.js powering the frontend
-    technologies: TypeScript, Nest.js, Flutter, PostgreSQL, Docker, Git
+    description: Spearheaded a team of 6 members using Scrum methodology to develop a reminder application that integrated Firebase Cloud Messaging and ML models, resulting in personalized product recommendations from Amazon and Walmart using content-based filtering
+    technologies: Flutter, Firebase, Python, TensorFlow, Scrum
     date: Jan 2024 -- Present
-    achievements:
-      - Implemented robust JWT-based authentication and authorization with role-based access control
+
+  - name: Prime Number Theory Research
+    description: Conducted research under Dr. Jemin Shim on Meissel-Lehmer algorithm and Prime Counting Functions, achieving efficient prime counting up to $10^{18}$ in 314,900 seconds
+    technologies: Python, NumPy, Mathematical Analysis
+    date: Aug 2023 -- Dec 2023
 
   - name: Trip Planner
-    description: Developed a React-based trip planner application utilizing Google Maps API for route visualization
-    technologies: React, Google Cloud, Google Maps API, Redux, Vercel
-    date: June 2023 -- July 2023
-    achievements:
-      - Utilized the Traveling Salesman Problem to find the shortest path based on both time and length factors
+    description: Developed a trip planning application implementing Dijkstra's algorithm with Google Maps API, resulting in 60% reduction in travel route planning time
+    technologies: React, Google Maps API, JavaScript
+    date: June 2023 -- Aug 2023
+
+  - name: Airfoil Simulation
+    description: Created a Python-based FEM simulation for airfoil pressure distribution, improving first-time understanding by 40% for master's students at Pulchowk Engineering Campus
+    technologies: Python, NumPy, Matplotlib, FEM
+    date: Jan 2023 -- May 2023
 
 skills:
-  - name: Languages
-    items: Python, SQL, Java, JavaScript, HTML, CSS, Dart
-  - name: Frameworks
-    items: React, Node.js, Next.js, Flask, Flutter, Material-UI, Django
-  - name: Developer Tools
-    items: Git, Linux, Google Cloud Platform, AWS, VS Code, SSH, Atlassian, Jupyter, OpenAPI
+  - name: Programming Languages
+    items: Java, Python, SQL, JavaScript, HTML, CSS, Dart
   - name: Libraries
-    items: TailwindCSS, pandas, NumPy, Matplotlib, Manim
+    items: React, Node.js, Next.js, Flask, Flutter, Material-UI, Django, TailwindCSS, pandas, NumPy, Matplotlib, Manim
+  - name: Tools
+    items: Git, Docker, Kubernetes, Linux, Google Cloud Platform, AWS, VS Code, SSH, Atlassian, Jupyter, OpenAPI
+  - name: Professional Skills
+    items: Agile/Scrum methodologies, Data analysis, Problem-solving, Team collaboration, Strong communication skills, Presentation and diagram skills, Self-learning, Curiosity
 
 activities:
   - name: Google Developer Group on Campus ULM, President

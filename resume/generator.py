@@ -275,7 +275,8 @@ class ResumeGenerator(DocumentGenerator):
             pdf_file = self.compile_pdf(tex_file)
 
             # delete the tex file
-            os.remove(tex_file)
+            if os.path.exists(tex_file):
+                os.remove(tex_file)
             
             return pdf_file
             
