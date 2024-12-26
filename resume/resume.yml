@@ -1,89 +1,89 @@
 personal:
-  name: Dinesh Chhantyal
-  location: Monroe, LA
-  phone: +1-318-750-6383
-  email: myagdichhantyal@gmail.com
-  website: https://www.dineshchhantyal.com
-  linkedin: https://linkedin.com/in/dineshchhantyal
+  name: [Your Name]
+  location: [Your Location]
+  phone: [Your Phone Number]
+  email: [Your Email Address]
+  website: [Your Website]
+  linkedin: [Your LinkedIn Profile]
 
 summary:
-  description: I am a motivated sophomore in Computer Science with expertise in web development, data visualization, and mobile development. I love utilizing tools like pandas, matplotlib, and generative AI to solve real-world problems.
+  description: [A brief description about yourself, your skills, and your interests.]
 
 education:
-  - name: University of Louisiana at Monroe
-    location: Monroe, LA
-    degree: Bachelor of Science in Computer Science, Minor in Mathematics
-    GPA: 4.0 / 4.0
-    date: Aug 2022 -- Dec 2025
-    courses: Python, Java, OOP, Data Structure, Discrete Structure, Linear Algebra, Financial Modeling, Investment Analysis, Data Structures, Statistics
+  - name: [Your University Name]
+    location: [University Location]
+    degree: [Your Degree and Minor]
+    GPA: [Your GPA]
+    date: [Start Date] -- [End Date]
+    courses: [List of relevant courses]
 
 experience:
-  - title: Web Developer
-    company: University of Louisiana - Monroe
-    location: Monroe, LA
-    date: Jan 2023 -- Present
+  - title: [Your Job Title]
+    company: [Company Name]
+    location: [Company Location]
+    date: [Start Date] -- [End Date]
     achievements:
-      - Created a reusable PHP Drupal module to integrate Microsoft Teams API, solving communication inefficiencies and achieving a 20% increase in student collaboration
-      - Engineered an ETL pipeline, migrating 10,000+ records from Drupal 8 to 10, optimizing data structures and reducing redundancy, resulting in a 15% improvement in query speed and a 10% reduction in storage
-      - Conducted comprehensive end-to-end testing across department webpages, improving issue detection by 75% and ensuring a seamless user experience before deployment
+      - [Achievement 1]
+      - [Achievement 2]
+      - [Achievement 3]
 
-  - title: Software Developer
-    company: Clamphook - EdTech Startup
-    location: Lalitpur, Nepal
-    date: Oct 2022 -- May 2023
+  - title: [Your Job Title]
+    company: [Company Name]
+    location: [Company Location]
+    date: [Start Date] -- [End Date]
     achievements:
-      - Amplified student capacity by developing a Computer-Based Testing (CBT) platform handling up to 5,000 concurrent users through efficient shift management, resulting in 4-5 times spikes in student enrollment
-      - Ensured robust deployment of frontend, admin panel, and backend components using Docker, including the successful launch of a mobile app on the Apple App Store, garnering 5,000 downloads within the first month
-      - Spearheaded the development of an intuitive user metrics dashboard for students and administrators using Chart libraries, leading to an 8% improvement in student consistency and a 25% enhancement in content efficiency
+      - [Achievement 1]
+      - [Achievement 2]
+      - [Achievement 3]
 
-  - title: Hardware and Software Intern
-    company: Baba Computer IT Solution
-    location: Pokhara, Nepal
-    date: Jan 2022 -- March 2022
+  - title: [Your Job Title]
+    company: [Company Name]
+    location: [Company Location]
+    date: [Start Date] -- [End Date]
     achievements:
-      - Diagnosed and resolved hardware issues in a school computer lab, thereby optimizing operational efficiency and reducing downtime by 40%
-      - Assembled and restored 20 personal computers, delivering dependable hardware solutions for clients
+      - [Achievement 1]
+      - [Achievement 2]
 
 projects:
-  - name: CheerPal
-    description: Spearheaded a team of 6 members using Scrum methodology to develop a reminder application that integrated Firebase Cloud Messaging and ML models, resulting in personalized product recommendations from Amazon and Walmart using content-based filtering
-    technologies: Flutter, Firebase, Python, TensorFlow, Scrum
-    date: Jan 2024 -- Present
+  - name: [Project Name]
+    description: [Project Description]
+    technologies: [Technologies Used]
+    date: [Start Date] -- [End Date]
 
-  - name: Prime Number Theory Research
-    description: Conducted research under Dr. Jemin Shim on Meissel-Lehmer algorithm and Prime Counting Functions, achieving efficient prime counting up to $10^{18}$ in 314,900 seconds
-    technologies: Python, NumPy, Mathematical Analysis
-    date: Aug 2023 -- Dec 2023
+  - name: [Project Name]
+    description: [Project Description]
+    technologies: [Technologies Used]
+    date: [Start Date] -- [End Date]
 
-  - name: Trip Planner
-    description: Developed a trip planning application implementing Dijkstra's algorithm with Google Maps API, resulting in 60% reduction in travel route planning time
-    technologies: React, Google Maps API, JavaScript
-    date: June 2023 -- Aug 2023
+  - name: [Project Name]
+    description: [Project Description]
+    technologies: [Technologies Used]
+    date: [Start Date] -- [End Date]
 
-  - name: Airfoil Simulation
-    description: Created a Python-based FEM simulation for airfoil pressure distribution, improving first-time understanding by 40% for master's students at Pulchowk Engineering Campus
-    technologies: Python, NumPy, Matplotlib, FEM
-    date: Jan 2023 -- May 2023
+  - name: [Project Name]
+    description: [Project Description]
+    technologies: [Technologies Used]
+    date: [Start Date] -- [End Date]
 
 skills:
   - name: Programming Languages
-    items: Java, Python, SQL, JavaScript, HTML, CSS, Dart
+    items: [List of Programming Languages]
   - name: Libraries
-    items: React, Node.js, Next.js, Flask, Flutter, Material-UI, Django, TailwindCSS, pandas, NumPy, Matplotlib, Manim
+    items: [List of Libraries]
   - name: Tools
-    items: Git, Docker, Kubernetes, Linux, Google Cloud Platform, AWS, VS Code, SSH, Atlassian, Jupyter, OpenAPI
+    items: [List of Tools]
   - name: Professional Skills
-    items: Agile/Scrum methodologies, Data analysis, Problem-solving, Team collaboration, Strong communication skills, Presentation and diagram skills, Self-learning, Curiosity
+    items: [List of Professional Skills]
 
 activities:
-  - name: Google Developer Group on Campus ULM, President
-    date: Aug 2024 -- Present
-    description: Directed a team to organize events focused on financial modeling, investment analysis, and strategic planning
+  - name: [Activity Name]
+    date: [Date]
+    description: [Activity Description]
 
-  - name: ICPC NA South Division 2024, State Champion
-    date: Nov 2024
-    description: Solved advanced algorithmic problems, demonstrating strong analytical and problem-solving skills
+  - name: [Activity Name]
+    date: [Date]
+    description: [Activity Description]
 
-  - name: MAA LA/MS Section Meeting, Integration Bee Third Place
-    date: Feb 2024
-    description: Earned 3rd place among 55+ participants, showcasing proficiency in mathematical analysis and problem-solving
+  - name: [Activity Name]
+    date: [Date]
+    description: [Activity Description]
