@@ -42,68 +42,53 @@ experience:
     date: Jan 2022 -- March 2022
     achievements:
       - Diagnosed and resolved hardware issues in a school computer lab, thereby optimizing operational efficiency and reducing downtime by 40%
-        - Assembled and restored 20 personal computers, delivering dependable hardware solutions for clients
+      - Assembled and restored 20 personal computers, delivering dependable hardware solutions for clients
 
 projects:
-  - name: "\textbf{NoteMeet}"
+  - name: NoteMeet
     description: Developed an AI-powered meeting note-taking platform, leveraging AWS products and a browser extension. The platform utilizes AWS Transcribe for accurate speech-to-text processing, EventBridge for seamless event-driven architecture, and Terraform for automated infrastructure provisioning. It integrates Amazon S3 for secure file storage, AWS Lambda for serverless backend processing, and DynamoDB for low-latency data operations, while employing a headless server for meeting recording.
-    technologies: AWS, React, Node.js, Terraform, DynamoDB
-    date: Jan 2024 -- Present
-    link: https://notemeet.ai
+    link: https://notemeet.dineshchhantyal.com
 
-  - name: "\textbf{Amazon Clone}"
+  - name: Amazon Clone
     description: Developed an Amazon clone that features user authentication, a marketplace, and a payment system using Stripe. The application utilizes cloud functions for backend processing and is built with React.js, providing a seamless user experience similar to the original Amazon platform.
-    technologies: React, Firebase, Node.js, Stripe
-    date: Oct 2023 -- Dec 2023
-    link: https://amazon-clone.dineshchhantyal.com
+    link: https://amazon.dineshchhantyal.com
 
-  - name: "\textbf{Covid-19 Tracker}"
+  - name: Covid-19 Tracker
     description: Developed a comprehensive Covid-19 tracking application using React and Firebase Hosting. The application leverages the Disease.sh API to retrieve real-time Covid-19 data, providing users with up-to-date information. It features interactive visualizations created with Chart.js and utilizes Leaflet for dynamic map displays.
-    technologies: React, Chart.js, Leaflet, Firebase
-    date: Aug 2023 -- Oct 2023
-    link: https://covid-tracker.dineshchhantyal.com
+    link: https://covid.dineshchhantyal.com
 
-  - name: "\textbf{Prime Number Theory Research}"
-    description: Conducted research under Dr. Jemin Shim on the Meissel-Lehmer algorithm and Prime Counting Functions using Python and NumPy, achieving efficient prime counting up to 10^18 in 314,900 seconds. Created visualization to compare efficiency of five different prime counting methods using Matplotlib.
-    technologies: Python, NumPy, Matplotlib
-    date: June 2023 -- Aug 2023
-    link: https://github.com/dineshchhantyal/prime-numbers
+  - name: Prime Number Theory Research
+    description: Conducted research under Dr. Jemin Shim on the Meissel-Lehmer algorithm and Prime Counting Functions using Python and NumPy, achieving efficient prime counting up to $10^18$ in 314,900 seconds. Created visualization to compare efficiency of five different prime counting methods using Matplotlib.
+    link: https://github.com/dineshchhantyal/prime-counting
 
-  - name: "\textbf{Trip Planner}"
+  - name: Trip Planner
     description: Developed a sophisticated trip planning application using React and Google Maps API. The application allows users to efficiently plan trips by adding destinations and activities while visualizing optimal routes. Implemented the Dijkstra algorithm to enhance pathfinding for both time and distance.
-    technologies: React, Google Maps API, JavaScript
-    date: March 2023 -- May 2023
-    link: https://trip-planner.dineshchhantyal.com
+    link: https://trip.dineshchhantyal.com/test
 
 skills:
-  - name: "\textbf{Programming Languages}"
+  - name: Programming Languages
     items: Python, C, C++, JavaScript, TypeScript
-  - name: "\textbf{Data Analysis}"
+  - name: Data Analysis
     items: Statistical Analysis, Data Visualization, Pattern Recognition
-  - name: "\textbf{Software Development}"
+  - name: Software Development
     items: Agile methodologies, Version control (Git), CI/CD
-  - name: "\textbf{Tools & Technologies}"
+  - name: Tools \& Technologies
     items: Docker, AWS, Google Cloud Platform, VS Code, Jupyter
-  - name: "\textbf{Professional Skills}"
+  - name: Professional Skills
     items: Problem-solving, Team collaboration, Strong communication skills, Self-learning, Curiosity
 
 activities:
-  - name: "\textbf{Google Developer Group on Campus ULM}, President"
+  - name: Google Developer Group on Campus ULM, President
     date: Aug 2024 -- Present
-    description: Leading tech community and organizing events
 
-  - name: "\textbf{ICPC NA South Division 2024}, State Champion"
+  - name: ICPC NA South Division 2024, State Champion
     date: Nov 2024
-    description: Solved advanced algorithmic problems
 
-  - name: "\textbf{MAA LA/MS Section Meeting}, Integration Bee Third Place"
+  - name: MAA LA/MS Section Meeting, Integration Bee Third Place
     date: Feb 2024
-    description: Earned 3rd place among 55+ participants
 
-  - name: "\textbf{Association for Computing Machinery (ACM)}, Member"
+  - name: Association for Computing Machinery (ACM), Member
     date: Aug 2022 -- Present
-    description: Participating in technical workshops and coding competitions
 
-  - name: "\textbf{IT Student Club of Nepal}, Member"
+  - name: IT Student Club of Nepal, Member
     date: Oct 2021 -- Dec 2021
-    description: Engaged in tech community building and knowledge sharing
