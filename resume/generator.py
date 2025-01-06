@@ -13,7 +13,7 @@ class ResumeGenerator(DocumentGenerator):
 
     def get_latex_preamble(self):
         """Returns the LaTeX preamble with all package imports and custom commands"""
-        return r'''\documentclass[letterpaper,11pt]{article}
+        return r'''\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -37,11 +37,7 @@ class ResumeGenerator(DocumentGenerator):
 \renewcommand{\footrulewidth}{0pt}
 
 % Margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.9in}
-\addtolength{\textheight}{1.25in}
+\usepackage[margin=0.25in]{geometry}  % Set all margins to 0.25 inches
 
 \urlstyle{same}
 \raggedbottom
@@ -81,11 +77,10 @@ class ResumeGenerator(DocumentGenerator):
         
         # Define replacements in order of precedence
         replacements = [
-            # ('\\', '\\textbackslash{}'),
+            ('#', '\\#'),  # Escape the # character
             ('&', '\\&'),
             ('%', '\\%'),
             # ('$', '\\$'),
-            ('#', '\\#'),
             ('_', '\\_'),
             # ('{', '\\{'),
             # ('}', '\\}'),
@@ -161,10 +156,8 @@ class ResumeGenerator(DocumentGenerator):
         content = []
         content.append("\\section*{\\textbf{Projects}}")
         content.append("\\resumeItemListStart{}")
-        
         for project in projects:
-            content.append(f"\\resumeItem{{\\textbf{{{project['name']}}} | {self.escape_latex(project['description'])}}}")
-            
+            content.append(f"\\resumeItem{{\\textbf{{{project['name']}}} | {self.escape_latex(project['description'])} | \\href{{{project['link']}}}{{\\textcolor{{blue}}{{\\underline{{Link}}}}}}}}")
         content.append("\\resumeItemListEnd")
         return '\n'.join(content)
 
@@ -183,14 +176,13 @@ class ResumeGenerator(DocumentGenerator):
         return '\n'.join(content)
 
     def generate_activities(self, activities):
-        """Generate the activities section"""
+        """Generate the activities section without descriptions"""
         content = []
         content.append("\\section*{\\textbf{Activities \\& Club Involvement}}")
         content.append("\\resumeItemListStart")
         
         for activity in activities:
-            content.append(f"\\resumeItem{{\\textbf{{{activity['name']}}}, {activity['date']}\\\\")
-            content.append(f"     {self.escape_latex(activity['description'])}}}")
+            content.append(f"\\resumeItem{{\\textbf{{{activity['name']}}}, {activity['date']}}}")  # Removed description
             
         content.append("\\resumeItemListEnd")
         return '\n'.join(content)

@@ -1,36 +1,36 @@
 personal_information:
-  name: "[Your Name]"
-  title: "[Your Title]"
+  name: "Dinesh Chhantyal"
+  title: "Software Development Co-Op"
   address:
-    line: "[Your Address]"
-    postal_code: "[Your Postal Code]"
-    country: "[Your Country]"
+    line: "Monroe, LA"
+    postal_code: "71203"
+    country: "United States"
   phone:
-    mobile: "[Your Mobile Number]"
-    fixed: "[Your Fixed Number]"
-    fax: "[Your Fax Number]"
-  email: "[Your Email]"
-  homepage: "[Your Homepage]"
-  extra_info: "[Your Extra Information]"
-  quote: "[Your Quote]"
+    mobile: "+1-318-750-6383"
+    fixed: ""
+    fax: ""
+  email: "myagdichhantyal@gmail.com"
+  homepage: "dineshchhantyal.com"
+  extra_info: "Full-stack developer with expertise in React.js, Python, and cloud technologies"
+  quote: "Passionate about building scalable solutions and driving technological innovation"
 
 recipient:
   name: "[Hiring Manager's Name]"
-  address: "[Company] \n[City], [State]"
+  address: "Medpace \nCincinnati, OH"
 
 letter:
   date: "[Current Date]"
   opening: "Dear Hiring Manager,"
   body: |
-    I am writing to express my interest in the [Position Title] position at [Company] for [Term/Year]. As a [Your Major/Field of Study] student at [Your University] maintaining a [Your GPA] GPA, I am eager to apply my skills in [Your Skills/Areas of Expertise] in a dynamic and innovative environment.
+    I am writing to express my interest in the Software Development Co-Op position at Medpace for Summer 2025. As a Computer Science student at the University of Louisiana at Monroe maintaining a 4.0 GPA, I am eager to apply my skills in software development, data analysis, and quality assurance in a dynamic and innovative environment.
 
-    My hands-on experience as a [Your Job Title] at [Your Previous Company] has equipped me with strong analytical and problem-solving skills. I successfully [Your Achievement/Project], resulting in [Impact of Your Work]. Additionally, I performed comprehensive [Your Task/Responsibility], achieving [Your Result] and enhancing [Outcome]. These experiences demonstrate my ability to deliver efficient, scalable solutions while maintaining high-quality standards.
+    My hands-on experience as a Web Developer at ULM has equipped me with strong analytical and problem-solving skills. I successfully integrated the Microsoft Teams API into our web application, resulting in a 30% increase in user engagement. Additionally, I performed comprehensive end-to-end testing across department webpages, achieving a 98% accuracy rate and enhancing user satisfaction. These experiences demonstrate my ability to deliver efficient, scalable solutions while maintaining high-quality standards.
 
-    At [Another Company], I developed [Project/Platform] that handled [User Capacity], resulting in [Impact]. I also created [Another Achievement] that streamlined [Process] and reduced [Task] by [Percentage]. My experience in deploying robust [Your Technologies/Skills] further highlights my technical proficiency.
+    At Clamphook, I developed a Computer-Based Testing platform that handled up to 5,000 concurrent users, resulting in a significant increase in student enrollment. I also created an intuitive admin panel that streamlined internal processes and reduced administrative tasks by 30%. My experience in deploying robust frontend and backend components using Docker containerization further highlights my technical proficiency.
 
-    I am particularly drawn to [Company]'s commitment to [Company's Mission/Values]. My proficiency in [Your Skills/Technologies], combined with my experience in [Methodologies/Practices], aligns perfectly with the requirements of this role. I am excited about the opportunity to contribute to [Company]'s strategic initiatives and support the development of high-quality software solutions.
+    I am particularly drawn to Medpace's commitment to accelerating the global development of safe and effective medical therapeutics. My proficiency in Java, Python, and SQL, combined with my experience in Agile/Scrum methodologies and cloud technologies, aligns perfectly with the requirements of this role. I am excited about the opportunity to contribute to Medpace's strategic initiatives and support the development of high-quality software solutions.
 
-    Thank you for considering my application. I look forward to discussing how my background, skills, and passion for [Your Field] can contribute to [Company]'s continued success.
+    Thank you for considering my application. I look forward to discussing how my background, skills, and passion for software development can contribute to Medpace's continued success.
 
   closing: "Best regards,"
-  enclosure: "[Your Enclosure]"
+  enclosure: "Resume"
