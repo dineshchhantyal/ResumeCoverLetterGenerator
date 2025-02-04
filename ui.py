@@ -1,7 +1,6 @@
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                             QLineEdit, QPushButton, QRadioButton, QButtonGroup,
-                            QLabel, QFileDialog, QMessageBox)
-from PyQt6.QtCore import Qt
+                            QLabel, QMessageBox)
 import sys
 import os
 from datetime import datetime
@@ -139,20 +138,17 @@ class ResumeGeneratorUI(QMainWindow):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"An error occurred: {str(e)}")
 
-import os
-import sys
 from PyQt6.QtWidgets import QApplication
-from PyQt6.QtCore import QLibraryInfo
+import sys
+from ui.main_window import MainWindow
 
 def main():
-    os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = QLibraryInfo.path(
-        QLibraryInfo.LibraryPath.PluginsPath
-    )
-
     app = QApplication(sys.argv)
-    window = ResumeGeneratorUI()
+    window = MainWindow()
     window.show()
-    sys.exit(app.exec())
+    return app.exec()
+
+from ui import main
 
 if __name__ == "__main__":
     main()
