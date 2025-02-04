@@ -74,7 +74,7 @@ class ResumeGenerator(DocumentGenerator):
         """Escape special LaTeX characters"""
         if not isinstance(text, str):
             text = str(text)
-        
+
         # Define replacements in order of precedence
         replacements = [
             ('#', '\\#'),  # Escape the # character
@@ -94,18 +94,18 @@ class ResumeGenerator(DocumentGenerator):
             ('−', '-'),  # Replace en-dash with hyphen
             ('–', '-'),  # Replace em-dash with hyphen
         ]
-        
+
         # Apply replacements
         for old, new in replacements:
             text = text.replace(old, new)
-        
+
         return text
 
     def generate_header(self, personal):
         """Generate the header section with personal information"""
         return f'''\\begin{{center}}
     \\textbf{{\\Huge \\scshape {personal['name']}}} \\\\ \\vspace{{0.2pt}}
-    \\small {personal['phone']} $|$ 
+    \\small {personal['phone']} $|$
     \\href{{mailto:{personal['email']}}}{{{personal['email']}}} $|$
     \\href{{{personal['website']}}}{{{personal['website'].replace('https://', '')}}} $|$
     \\href{{{personal['linkedin']}}}{{{personal['linkedin'].replace('https://', '')}}}
@@ -116,17 +116,17 @@ class ResumeGenerator(DocumentGenerator):
         content = []
         content.append("\\section*{\\textbf{Education}}")
         content.append("\\resumeSubHeadingListStart")
-        
+
         for school in education:
             content.append("\\resumeSubheading")
             content.append(f"{{{school['name']}}}{{{school['location']}}}")
-            content.append(f"{{{school['degree']}}}{{{school['date']}}}")
-            
+            content.append(f"{{{school['degree']}, {{GPA: {school['GPA']}}}}}{{{school['date']}}}")
+
             if 'courses' in school:
                 content.append("\\resumeItemListStart")
-                content.append(f"\\resumeItem{{Coursework: {school['courses']}}}")
+                content.append(f"\\resumeItem{{{school['courses']}}}")
                 content.append("\\resumeItemListEnd")
-                
+
         content.append("\\resumeSubHeadingListEnd")
         return '\n'.join(content)
 
@@ -135,19 +135,19 @@ class ResumeGenerator(DocumentGenerator):
         content = []
         content.append("\\section*{\\textbf{Experience}}")
         content.append("\\resumeSubHeadingListStart")
-        
+
         for job in experience:
             content.append("\\resumeSubheading")
             content.append(f"{{{self.escape_latex(job['title'])}}}{{{job['date']}}}")
             content.append(f"{{{self.escape_latex(job['company'])}}}{{{self.escape_latex(job['location'])}}}")
-            
+
             content.append("\\resumeItemListStart")
             for achievement in job['achievements']:
                 # Ensure the achievement text is properly escaped and wrapped
                 escaped_achievement = self.escape_latex(achievement)
                 content.append(f"\\resumeItem{{{escaped_achievement}}}")
             content.append("\\resumeItemListEnd")
-            
+
         content.append("\\resumeSubHeadingListEnd")
         return '\n'.join(content)
 
@@ -167,29 +167,39 @@ class ResumeGenerator(DocumentGenerator):
         content.append("\\section*{\\textbf{Technical Skills}}")
         content.append("\\begin{itemize}[leftmargin=0.15in, label={}]")
         content.append("\\small{\\item{")
-        
+
         for category in skills:
             content.append(f"\\textbf{{{category['name']}}}{{: {category['items']}}} \\\\")
-            
+
         content.append("}}")
         content.append("\\end{itemize}")
         return '\n'.join(content)
 
     def generate_activities(self, activities):
-        """Generate the activities section without descriptions"""
+        """Generate the activities section"""
         content = []
         content.append("\\section*{\\textbf{Activities \\& Club Involvement}}")
-        content.append("\\resumeItemListStart")
-        
+        content.append("\\resumeItemListStart{}")
         for activity in activities:
-            content.append(f"\\resumeItem{{\\textbf{{{activity['name']}}}, {activity['date']}}}")  # Removed description
-            
+            name = self.escape_latex(activity['name'])
+            description = self.escape_latex(activity['description']) if 'description' in activity else ''
+            date = self.escape_latex(activity['date'])
+
+            formatted_activity = (
+                f"\\resumeItem{{"
+                f"\\textbf{{{name}}} "  # Bold name
+                f"\\hfill {date}\\\\"    # Right-aligned date
+                f"{description}"         # Description on new line
+                f"}}"
+            )
+
+            content.append(formatted_activity)
         content.append("\\resumeItemListEnd")
         return '\n'.join(content)
 
     def generate_resume(self, yaml_file):
         """Generate the complete LaTeX resume from YAML"""
-     
+
         content = [
             self.latex_preamble,
             "\\begin{document}",
@@ -202,31 +212,31 @@ class ResumeGenerator(DocumentGenerator):
             "\\end{document}"
         ]
 
-        
+
         return '\n\n'.join(content)
 
     def save_resume(self, yaml_file, output_dir="output"):
         """Save the generated LaTeX resume to a file"""
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
-        
+
 
         latex_content = self.generate_resume(yaml_file)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_file = os.path.join(output_dir, f"resume_{timestamp}.tex")
-        
+
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(latex_content)
-        
+
 
         return output_file
-    
+
     def compile_pdf(self, tex_file):
         """Compile LaTeX file to PDF using pdflatex"""
         try:
             # Get the directory containing the tex file
             output_dir = os.path.dirname(tex_file)
-            
+
             # Run pdflatex twice to ensure proper generation of references
             for _ in range(2):
                 subprocess.run([
@@ -235,20 +245,20 @@ class ResumeGenerator(DocumentGenerator):
                     '-output-directory=' + output_dir,
                     tex_file
                 ], check=True, capture_output=True)
-            
+
             # Clean up auxiliary files
             base_name = os.path.splitext(tex_file)[0]
             for ext in ['.aux', '.log', '.out']:
                 aux_file = base_name + ext
                 if os.path.exists(aux_file):
                     os.remove(aux_file)
-            
+
             pdf_file = base_name + '.pdf'
             if os.path.exists(pdf_file):
                 return pdf_file
             else:
                 raise Exception("PDF file was not generated")
-            
+
         except subprocess.CalledProcessError as e:
             print(f"Error during PDF compilation: {e}")
             print(f"LaTeX output: {e.output.decode()}")
@@ -262,16 +272,16 @@ class ResumeGenerator(DocumentGenerator):
         try:
             # First generate the tex file
             tex_file = self.save_resume(yaml_file, output_dir)
-            
+
             # Then compile it to PDF
             pdf_file = self.compile_pdf(tex_file)
 
             # delete the tex file
             if os.path.exists(tex_file):
                 os.remove(tex_file)
-            
+
             return pdf_file
-            
+
         except Exception as e:
             print(f"Failed to generate PDF: {str(e)}")
             raise

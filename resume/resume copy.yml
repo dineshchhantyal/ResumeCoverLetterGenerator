@@ -68,13 +68,17 @@ projects:
 
 skills:
   - name: Programming Languages
-    items: C/C++, Python, Java, Kotlin (Learning), JavaScript
-  - name: Embedded Systems \& IoT
-    items: Embedded Programming, CAN Bus, Bluetooth, Vector Mathematics
-  - name: Development Tools
-    items: Git, Jira, Oscilloscope, Debugging Tools
+    items: Python, Java, C, SQL, JavaScript, TypeScript, Golang
   - name: Software Development
-    items: Algorithms, Data Structures, Testing, Documentation
+    items: RESTful APIs, React.js, Node.js, Kubernetes, CI/CD (GitHub Actions, Jenkins), Agile Development
+  # - name: Data Science \& Machine Learning
+  #   items: Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow, PyTorch, Data Wrangling, Statistical Analysis
+  - name: Tools \& Technologies
+    items: Git, Jupyter, VS Code, Postman, Figma, Jira, Airflow, MySQL, MongoDB, DynamoDB, Terraform
+  - name: Cloud Technologies
+    items: AWS (Lambda, S3, DynamoDB, EventBridge), Google Cloud Platform, Terraform, Serverless Architecture, DigitalOcean
+  - name: Professional Skills
+    items: Problem-solving, Team collaboration, Strong communication skills, Self-learning, Curiosity, Time management
 
 activities:
   - name: Google Developer Group on Campus ULM, President

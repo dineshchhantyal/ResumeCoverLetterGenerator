@@ -16,10 +16,6 @@ A Python-based tool that generates professional resumes and cover letters using 
 
 - Python 3.6+
 - LaTeX distribution (TeX Live or MiKTeX)
-- Required Python packages:
-  ```bash
-  pip install pyyaml
-  ```
 
 ## 📦 Installation
 
