@@ -48,7 +48,7 @@ def create_output_structure(base_dir, company_name, role_name):
     os.makedirs(output_path, exist_ok=True)
     return output_path
 
-def main():
+def cli_main():
     base_dir = os.getcwd()
     company_name = get_company_name()
     role_name = get_role_name()
@@ -77,6 +77,25 @@ def main():
         coverletter_generator = CoverLetterGenerator(os.path.join(base_dir, "coverletter", "coverletter.yml"))
         output_file = coverletter_generator.generate_pdf(cover_letter_file, output_dir, company_name)
         print(f"\nCover letter generated: {output_file}")
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--ui', action='store_true', help='Launch GUI version')
+    args = parser.parse_args()
+
+    if args.ui:
+        try:
+            from ui import main as ui_main
+            ui_main()
+        except ImportError as e:
+            print("\nError: PyQt6 is not properly installed.")
+            print("Please run: pip install PyQt6 PyQt6-Qt6 PyQt6-sip")
+            print(f"Original error: {str(e)}")
+        except Exception as e:
+            print(f"\nFailed to start UI: {str(e)}")
+    else:
+        cli_main()
 
 if __name__ == "__main__":
     try:

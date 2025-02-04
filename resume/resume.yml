@@ -68,13 +68,13 @@ projects:
 
 skills:
   - name: Programming Languages
-    items: C/C++, Python, Java, Kotlin (Learning), JavaScript
-  - name: Embedded Systems \& IoT
-    items: Embedded Programming, CAN Bus, Bluetooth, Vector Mathematics
+    items: C/C++, Python, Java, Assembly # Prioritize embedded systems languages
+  - name: Embedded Systems
+    items: ADC/DAC, PWM, I2C, SPI, RS232, Hardware Debugging
   - name: Development Tools
-    items: Git, Jira, Oscilloscope, Debugging Tools
-  - name: Software Development
-    items: Algorithms, Data Structures, Testing, Documentation
+    items: Oscilloscope, Function Generators, Git, Test Automation
+  - name: Software Engineering
+    items: System Design, Firmware Development, Test Documentation
 
 activities:
   - name: Google Developer Group on Campus ULM, President

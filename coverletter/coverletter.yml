@@ -16,24 +16,24 @@ personal_information:
 
 recipient:
   name: "Hiring Manager"
-  company: "Brunswick"
+  company: "Intuitive"
   title: "Hiring Manager"
-  address: "Brunswick\nTulsa, OK\nUnited States"
+  address: "Intuitive\nSunnyvale, CA\nUnited States"
 
 letter:
   date: "[Current Date]"
   opening: "Dear Hiring Manager,"
   body: |
-    I am writing to express my strong interest in the Software Engineering Intern position at Brunswick's Navico Group. As a Computer Science student at ULM maintaining a 4.0 GPA, I bring strong C++ programming skills and algorithm development experience that aligns with Navico's embedded systems development needs.
+    I am writing to express my strong interest in the Software Engineering Intern position at Intuitive. My journey in embedded systems began when I built my first Arduino-based project in high school - a heart rate monitor that could detect irregular rhythms. This early experience with hardware-software integration sparked my passion for medical technology and led me to pursue Computer Science at ULM, where I maintain a 4.0 GPA.
 
-    My research work on the Prime Number Theory project demonstrates my proficiency in C++ and algorithm optimization. I implemented efficient computational methods that achieved a 40% performance improvement through vector mathematics and parallel processing - skills directly applicable to developing positioning algorithms for trolling motors.
+    My research work on optimizing computational methods demonstrates my ability to work with complex systems. While implementing the Meissel-Lehmer algorithm, I utilized low-level C++ optimizations and hardware-specific features to achieve efficient processing - skills directly applicable to developing firmware for Intuitive's surgical systems.
 
-    At ULM, I've gained valuable experience in debugging and testing, having automated testing processes for 50+ systems and reduced post-launch errors by 30%. This systematic approach to quality assurance aligns well with Navico's needs for product testing and bug fixing in existing products.
+    At ULM, I engineered test automation frameworks using Selenium and Cypress, reducing post-launch errors by 30%. This systematic approach to testing and validation aligns well with Intuitive's need for robust verification of surgical device firmware. I've also gained experience with embedded systems debugging tools and hardware interfaces through various academic projects.
 
-    My experience includes developing real-time data processing systems and working with various communication protocols. At Clamphook, I architected a system supporting 5,000+ concurrent users with 99.9% uptime, demonstrating my ability to build reliable, performant software solutions.
+    Working at Clamphook, I developed real-time data processing systems that maintained 99.9% uptime - crucial for medical applications. I implemented comprehensive testing protocols and documentation practices, essential skills for developing surgical robotics software where reliability is paramount.
 
-    What particularly excites me about Brunswick is the opportunity to work at the intersection of software and marine technology. Your focus on transforming marine recreation through innovative technology resonates with my passion for creating impactful solutions.
+    What particularly excites me about Intuitive is your mission to advance minimally invasive care through innovative technology. Your da Vinci Surgical System represents the cutting edge of medical robotics, and I am eager to contribute to technology that directly improves patient outcomes.
 
-    I am eager to contribute to Navico's trolling motor development team and learn about marine electronics and embedded systems. My strong foundation in C++, experience with debugging tools, and enthusiasm for learning new technologies make me an ideal candidate for this role.
+    I am particularly drawn to the opportunity to work on embedded software for surgical devices. My strong foundation in C/C++, experience with system testing, and passion for medical technology make me an ideal candidate for this role.
   closing: "Best regards,"
   enclosure: "Resume"
