@@ -1,90 +1,92 @@
 personal:
-  name: Dinesh Chhantyal
-  location: Monroe, LA
-  phone: +1-318-750-6383
-  email: myagdichhantyal@gmail.com
-  website: https://www.dineshchhantyal.com
-  linkedin: https://linkedin.com/in/dineshchhantyal
+    name: Dinesh Chhantyal
+    location: New York, NY
+    phone: +1-318-750-6383
+    email: myagdichhantyal@gmail.com
+    website: https://www.dineshchhantyal.com
+    linkedin: https://linkedin.com/in/dineshchhantyal
 
-summary:
-  description: I am a motivated sophomore in Computer Science with expertise in data engineering, cloud computing, and software development. I love utilizing tools like pandas, matplotlib, and generative AI to solve real-world problems.
+summary: |
+    Passionate Software Engineer with expertise in DevOps, CI/CD pipelines, and test automation. Adept at leveraging modern tools and practices to enhance software quality and accelerate development cycles. Committed to fostering a developer-friendly environment and driving innovation in connectivity solutions.
 
 education:
-  - name: University of Louisiana at Monroe
-    location: Monroe, LA
-    degree: Bachelor of Science in Computer Science, Minor in Mathematics
-    GPA: 4.0 / 4.0
-    date: Aug 2022 -- Dec 2025 (Senior)
-    courses: OOP, Data Structure, Linear Algebra, Data Structures, Statistics, Database Management, Operating Systems, Computer Networks
+    - name: University of Louisiana at Monroe
+      location: Monroe, LA
+      degree: Bachelor of Science in Computer Science, Minor in Mathematics
+      GPA: 4.0 / 4.0
+      date: Aug 2022 -- May 2026 (Senior)
+      courses: Data Structures, Algorithms, Object-Oriented Programming, Database Management, Operating Systems, Computer Networks
 
 experience:
-  - title: Full Stack Developer
-    company: University of Louisiana - Monroe
-    location: Monroe, LA
-    date: Jan 2023 -- Present
-    achievements:
-      - Developed a custom \textbf{PHP/Drupal} module leveraging \textbf{OAuth 2.0} to sync \textbf{Microsoft Teams API} with the university’s CMS, automating calendar and file-sharing workflows to resolve communication bottlenecks and increase student collaboration by \textbf{20%}.
-      - Engineered a \textbf{Python/MySQL ETL pipeline} to transform and migrate \textbf{10,000+ legacy records} into \textbf{Drupal 10}, implementing data validation scripts and normalized schemas to reduce redundancy, accelerate query speeds by \textbf{15%}, and cut storage costs by \textbf{10%}.
-      - Automated end-to-end testing for \textbf{50+ department webpages} using \textbf{Selenium} and \textbf{Cypress}, integrating tests into a \textbf{CI/CD pipeline} (GitHub Actions) to boost pre-deployment issue detection by \textbf{75%} and reduce post-launch user-reported errors by \textbf{30%}.
+    - title: Software Engineering Intern (ML)
+      company: Simons Foundation (SCC, Flatiron Institute)
+      location: New York, NY
+      date: July 2025 -- Aug 2025
+      achievements:
+          - Built an interactive, \textbf{PyQt-based parallel processing pipeline} with \textbf{3D visualization tools} to process \textbf{1.2TB of raw cryo-EM and whole-slide images}, leveraging \textbf{sliding window techniques} for optimized I/O and memory usage, and \textbf{Ceph/S3} for efficient data access, enabling the creation of \textbf{ground truth datasets}.
+          - Orchestrated a distributed inference and visualization pipeline for millions of nucleus state predictions, achieving a \textbf{22x speedup} (45 min to 2 min) on a \textbf{10-GPU cluster} (\textbf{8xV100}, \textbf{2xA100}) through optimized batching, mixed-precision, and close iteration with data scientists.
+          - Improved cellular classification model to a \textbf{0.91 macro F1-score} by developing a \textbf{spatio-temporal 3D-CNN} over \textbf{4-channel inputs} (volumetric frames + segmentation masks), in coordination with domain experts across \textbf{600+ timepoints} and \textbf{25,000+ cells}.
+          - Launched \textbf{Chart-Gizmos}, an open-source \textbf{Python library} for browser-based scientific visualizations, integrating \textbf{Chart.js} into \textbf{H5Gizmos} with a modular API, full documentation, and collaborative design input from cross-functional teams.
 
-  - title: Software Developer
-    company: Clamphook - EdTech Startup
-    location: Lalitpur, NP
-    date: Oct 2022 -- May 2023
-    achievements:
-      - Developed a \textbf{Flask} and \textbf{React}-based \textbf{Computer-Based Testing (CBT)} platform with \textbf{Redis session caching} and \textbf{Nginx load balancing}, enabling \textbf{5,000+ concurrent users} and driving a \textbf{40% reduction in server latency} to support \textbf{5x enrollment growth}.
-      - Architected a \textbf{Docker-based microservices infrastructure} for Flask backend APIs and React admin panels, automating \textbf{CI/CD pipelines} with \textbf{GitHub Actions} to deploy a \textbf{React Native iOS app} that achieved \textbf{5,000+ downloads} and \textbf{99.9% uptime} post-launch.
-      - Designed a real-time metrics dashboard using \textbf{Chart.js} and \textbf{Flask-SocketIO}, integrated with \textbf{PostgreSQL query optimizations}, to increase student consistency by \textbf{8%} and content efficiency by \textbf{25%} through actionable data insights.
+    - title: Software Engineer
+      company: University of Louisiana - Monroe
+      location: Monroe, LA
+      date: Jan 2023 -- Present
+      achievements:
+          - Integrated \textbf{Microsoft Teams API} with \textbf{Drupal CMS} via \textbf{OAuth 2.0} for real-time messaging and calendar synchronization, streamlining workflows and reducing administrative overhead from \textbf{4 hours to 30 minutes weekly}.
+          - Engineered a \textbf{Node.js/TypeScript/MySQL/ETL pipeline} to migrate \textbf{10,000+ legacy records} into \textbf{Drupal 10}, optimizing database schemas to accelerate query performance by \textbf{15%} and reduce storage costs by \textbf{10%} for improved system efficiency.
+          - Automated end-to-end testing for \textbf{50+ webpages} using \textbf{Selenium} and \textbf{Cypress}, integrating into a \textbf{CI/CD pipeline} with \textbf{GitLab} to enhance deployment reliability and boost pre-deployment issue detection by \textbf{75%}.
 
-  - title: Frontend Developer
-    company: Padhao Academy
-    location: Remote (Kathmandu, NP)
-    date: Oct 2021 -- Dec 2021
-    achievements:
-      - Built a \textbf{Next.js/TypeScript}-based \textbf{RBAC system} with \textbf{JWT encryption} and \textbf{OAuth 2.0} integration, eliminating unauthorized access vulnerabilities and achieving \textbf{100% compliance with GDPR standards} for \textbf{5,000+ users}.
-      - Reduced critical bugs by \textbf{90%} by designing \textbf{Postman test suites} and peer review workflows, slashing post-deployment user-reported issues by \textbf{40%} across \textbf{15+ application modules}.
-      - Collaborated with designers via \textbf{Figma} to implement a \textbf{Carbon Design}-based interface with dynamic math rendering using \textbf{KaTex}, while streamlining deployments via \textbf{GitHub Actions CI/CD} to cut release cycles by \textbf{30%} and accelerate feature delivery.
+    - title: Software Developer
+      company: Clamphook - EdTech
+      location: Lalitpur, NP
+      date: Oct 2022 -- May 2023
+      achievements:
+          - Spearheaded a \textbf{Node.js} and \textbf{React}-based Computer-Based Testing (CBT) platform with \textbf{Redis} caching and \textbf{NGINX} load balancing, enabling \textbf{5,000+ concurrent users} to support \textbf{5x enrollment growth} in an \textbf{Agile Scrum} environment.
+          - Architected a \textbf{Docker/Kubernetes}-based microservices infrastructure with \textbf{Helm} charts and automated \textbf{CI/CD} pipelines using \textbf{GitLab}, achieving \textbf{99.9% uptime} for production applications with \textbf{5,000+ downloads} on App Store.
+          - Developed real-time analytics dashboard with \textbf{TypeScript}, \textbf{MongoDB}, and \textbf{Chart.js}, driving an \textbf{8% increase in user engagement} through interactive performance insights and streamlined workflow management.
+          - Conducted \textbf{code reviews}, documented \textbf{API specifications}, and troubleshot production issues while collaborating with cross-functional teams (design, product, QA) in a startup environment.
 
 projects:
-  - name: NoteMeet
-    description: Developed an \textbf{AI-powered meeting note-taking platform} that automates \textbf{transcription}, \textbf{summarization}, and \textbf{organization} of meeting notes. The platform integrates with \textbf{browser extensions} to record meetings, transcribe audio using \textbf{AWS Transcribe}, and store notes securely in \textbf{Amazon S3}. By leveraging \textbf{AWS Lambda} for \textbf{serverless processing} and \textbf{DynamoDB} for \textbf{real-time data access}, the system reduces manual note-taking effort by 80% and improves meeting productivity.
-    link: https://notemeet.dineshchhantyal.com
+    - name: NoteMeet
+      description: Architected an \textbf{AI-powered meeting assistant} that automates meeting \textbf{joining, recording, and summarization} for enhanced business workflow efficiency. Implemented a \textbf{Retrieval-Augmented Generation (RAG) system} with \textbf{LangChain} and \textbf{OpenAI GPT} for enhanced AI accuracy. Built on a \textbf{scalable, event-driven terraform based AWS Infrastructure} (\textbf{Lambda}, \textbf{S3}, \textbf{DynamoDB}) for serverless audio/video processing, seamlessly integrated with \textbf{Google Meet}. Enhanced deployment reliability with \textbf{GitLab CI/CD}.
+      link: https://notemeet.dineshchhantyal.com
 
-  - name: TimeClock
-    description: Built an \textbf{enterprise-grade time management system} to streamline \textbf{employee attendance tracking} and \textbf{workforce management}. The system features \textbf{real-time GPS tracking}, \textbf{role-based access control}, and \textbf{automated reporting}, enabling managers to monitor attendance effectively. Additionally, the platform provides \textbf{next payday}, \textbf{payment summaries}, and insights into \textbf{departmental projects} and \textbf{employee expenses}.
-    link: https://timeclock.dineshchhantyal.com
+    - name: RhymeAI
+      description: Pioneered a \textbf{multi-agent AI Emcee platform} using \textbf{Next.js}, \textbf{TypeScript}, and \textbf{Vercel} that automates live event hosting by generating \textbf{event narratives, scripts, and studio-grade multilingual voice-overs}. Orchestrated specialized AI agents using \textbf{Gemini 2.5 Pro API} and \textbf{LangChain} to plan event flows and adapt content in real time, while leveraging \textbf{ElevenLabs TTS API} and \textbf{Veo} to deliver a flawless, human-like emcee performance for enhanced efficiency and audience engagement.
+      link: https://rhyme-ai.vercel.app/
 
-  - name: Amazon Clone
-    description: Created a \textbf{full-stack e-commerce platform} mimicking Amazon's \textbf{core functionality}, including \textbf{user authentication}, \textbf{product listings}, and a \textbf{secure payment system} powered by \textbf{Stripe}. The application uses \textbf{React.js} for the \textbf{frontend} and \textbf{cloud functions} for backend processing, delivering a seamless shopping experience with 90% uptime.
-    link: https://amazon.dineshchhantyal.com
+    - name: OfferMart
+      description: Engineered a \textbf{supply chain platform} using \textbf{Next.js}, \textbf{TypeScript}, \textbf{Node.js}, and \textbf{MongoDB} to combat food waste. Implemented \textbf{RBAC} with \textbf{NextAuth.js} and an \textbf{AI-driven verification system} for \textbf{real-time product analysis}. Deployed with \textbf{Docker} and \textbf{NGINX}, featuring \textbf{dynamic pricing algorithms} and enhanced monitoring with \textbf{Prometheus} and \textbf{Grafana}.
+      link: https://offermart.vercel.app/
 
-  - name: Prime Number Theory Research
-    description: Conducted research under Dr. Jemin Shim on the \textbf{Meissel-Lehmer algorithm} and \textbf{Prime Counting Functions} using \textbf{Python} and \textbf{NumPy}, achieving efficient prime counting up to \textbf{$10^{18}$} in \textbf{314,900 seconds}. Created visualizations to compare the efficiency of five different prime counting methods using \textbf{Matplotlib}.
-    link: https://github.com/dineshchhantyal/prime-counting
+    # - name: TimeClock
+    #   description: Engineered a comprehensive \textbf{TypeScript/Node.js workforce management and operations platform} using \textbf{Angular}, \textbf{Express}, and \textbf{MongoDB}. Implemented \textbf{real-time monitoring} with \textbf{Redis} caching, \textbf{automated timesheet generation}, and \textbf{manager dashboards} with \textbf{Chart.js}. Features \textbf{RESTful API} integration for payroll systems that reduced administrative overhead by \textbf{40%} and improved operational efficiency for enterprise clients.
+    #   link: https://github.com/dineshchhantyal/TimeClock
 
-  - name: Trip Planner
-    description: Designed a \textbf{trip planning application} that helps users optimize \textbf{travel routes} by adding \textbf{destinations and activities}. Integrated \textbf{Google Maps API} for \textbf{route visualization} and implemented the \textbf{Dijkstra algorithm} to calculate the most efficient paths, reducing travel planning time by 40%.
-    link: https://trip.dineshchhantyal.com/test
+    - name: CodeStroke Pro
+      description: Collaborated with the \textbf{Pharmacist} to develop a \textbf{cutting-edge, evidence-based clinical support tool} designed to assist healthcare professionals in managing stroke patients. The platform streamlines decision-making by guiding clinicians through \textbf{treatment eligibility}, \textbf{precise dosing}, and \textbf{patient monitoring}. Built using \textbf{Python}, \textbf{FastAPI}, and \textbf{AWS}, this innovative tool accelerates \textbf{stroke care delivery}, enhances \textbf{clinical workflows}, and minimizes \textbf{delays in acute care settings}, ultimately improving \textbf{patient outcomes}.
+      link: https://codestrokepro.org
 
 skills:
-  - name: Programming Languages
-    items: C/C++, Python, Java, Assembly # Prioritize embedded systems languages
-  - name: Embedded Systems
-    items: ADC/DAC, PWM, I2C, SPI, RS232, Hardware Debugging
-  - name: Development Tools
-    items: Oscilloscope, Function Generators, Git, Test Automation
-  - name: Software Engineering
-    items: System Design, Firmware Development, Test Documentation
+    - name: Programming Languages
+      items: Python, Java, Golang, TypeScript, JavaScript (ES6+), SQL, Bash, C
+
+    - name: DevOps \& Infrastructure
+      items: Docker, Kubernetes, Terraform, Ansible, Prometheus, Grafana, GitLab CI/CD, GCP
+
+    - name: Testing \& Automation
+      items: Selenium, Cypress, Test-Driven Development (TDD), Continuous Testing
+
+    - name: Development Practices
+      items: Agile/Scrum, Code Reviews, Documentation, Troubleshooting
 
 activities:
-  - name: Google Developer Group on Campus ULM, President
-    date: Aug 2024 -- Present
+    - name: Google Developer Group on Campus ULM, President
+      date: Aug 2024 -- Present
 
-  - name: ICPC NA South Division 2024, State Champion
-    date: Nov 2024
+    - name: IEEE Shreveport Section, Webmaster
+      date: Jan 2025 -- Present
 
-  - name: MAA LA/MS Section Meeting, Integration Bee Third Place
-    date: Feb 2024
-
-  - name: Association for Computing Machinery (ACM), Member
-    date: Aug 2022 -- Present
+    - name: ICPC NA South Division 2024 Coding Competition, State Champion
+      date: Nov 2024

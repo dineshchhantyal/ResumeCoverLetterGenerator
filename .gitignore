@@ -7,3 +7,4 @@ __pycache__/
 # Ignore resume and cover letter files
 resume/resume.yml
 coverletter/coverletter.yml
+applications/

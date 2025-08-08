@@ -1,0 +1,45 @@
+START OF PROMPT
+
+I am applying for a specific job opportunity, and I need you to generate a revised resume and a cover letter tailored to this role based on my existing resume content. DONT CHANGE THE XML FORMAT. DONT MAKES A EXACT COPY OF JOB DESCRIPTION CORRATE WITH IT DONT MAKE LIKE A AI WRITING. Please follow the guidelines below to ensure both documents are optimized for the application:
+
+1. Resume Creation Instructions:
+
+Content Focus:
+Emphasize skills, experiences, and achievements that are directly relevant to the job role.
+Use clear, concise bullet points to detail accomplishments.
+Quantifiable Achievements:
+Highlight measurable outcomes and specific examples (e.g., “increased sales by 20%”, “managed a team of 10”).
+Use active verbs like “developed,” “implemented,” and “managed.”
+
+Keywords & Industry Language:
+Integrate keywords and phrases from the job description to help with applicant tracking systems.
+Formatting:
+Use a clean, professional with consistent wording throughout.
+The action verbs should be unique and varied.
+
+
+2. Cover Letter Creation Instructions:
+
+Introduction:
+Provide a brief introduction that outlines your interest in the role and the company.
+Alignment:
+Clearly explain how your background, skills, and experiences align with the job requirements.
+Include a short narrative or example of a significant professional achievement relevant to the role.
+Closing:
+Conclude with a confident call to action, inviting the recruiter to discuss your application further.
+Maintain a professional yet engaging tone throughout.
+3. Additional Guidelines for Both Documents:
+
+Ensure consistency in tone, style, and formatting across both documents.
+Keep the language clear, concise, and error-free.
+Prioritize brevity without sacrificing essential details.
+Focus on achievements and contributions that have measurable results.
+Base all modifications on the details provided in my current resume content below. MAKE SURE OF MY PERSONAL TONE. I AM EMOTIONAL and PROFESSIONAL HARD WORKER.
+My Current Resume Content: [Insert Resume Content Here]
+
+Note:
+Once you have generated the resume and cover letter based on the above instructions and my resume content, please append the specific job description below this entire prompt. This job description will provide additional context and keywords to further tailor both documents.
+
+NOTE: As this is latex % should be escaped as \%,  & should be escaped as \& and # should be escaped as \#.
+END OF PROMPT
+

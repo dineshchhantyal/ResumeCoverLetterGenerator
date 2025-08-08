@@ -1,0 +1,96 @@
+personal:
+    name: Dinesh Chhantyal
+    location: Monroe, LA
+    phone: +1-318-750-6383
+    email: myagdichhantyal@gmail.com
+    website: https://www.dineshchhantyal.com
+    linkedin: https://linkedin.com/in/dineshchhantyal
+
+summary: |
+    Dedicated Computer Science student with expertise in Python, Java, SQL, and cloud-scale data engineering. Proven ability to design scalable systems, optimize data pipelines, and deliver actionable insights. Passionate about leveraging technology to drive client impact, foster collaboration, and innovate in financial services.
+
+education:
+    - name: University of Louisiana at Monroe
+      location: Monroe, LA
+      degree: Bachelor of Science in Computer Science, Minor in Mathematics
+      GPA: 4.0 / 4.0
+      date: Aug 2022 -- May 2026 (Senior)
+      courses: Data Structures, Algorithms, Object-Oriented Programming, Database Management, Operating Systems, Computer Networks
+
+experience:
+    - title: Software Engineering Intern (ML)
+      company: Simons Foundation (Flatiron Institute)
+      location: New York, NY
+      date: Summer 2025
+      achievements:
+          - Reduced slide inference time by \textbf{22×} (\textbf{45min → <2min}) across a \textbf{1.2TB microscopy dataset} by batching, mixed-precision optimization, and deploying \textbf{PyTorch models} with \textbf{TorchScript} on \textbf{SLURM}-scheduled \textbf{A100/V100 GPU nodes}.
+          - Developed a \textbf{spatio-temporal 3D-CNN} that achieved a \textbf{0.91 macro F1-score} on cellular state classification, processing a \textbf{4-channel input} (volumetric frames + segmentation masks) over \textbf{600+ timepoints} and \textbf{25,000+ cells}.
+          - Engineered a \textbf{production-scale image processing pipeline} using \textbf{SLURM job arrays}, \textbf{Ceph/S3} for data access, and \textbf{Weights \& Biases} for experiment tracking, authoring custom \textbf{Triton} and \textbf{PyTorch kernels} to handle \textbf{cryo-EM and whole-slide images}.
+          - Authored \textbf{Chart Gizmo}, an open-source \textbf{Python library} integrating \textbf{Chart.js} into \textbf{H5Gizmos} for interactive, browser-based visualizations with python interfaces; created a modular API and full developer documentation.
+
+    - title: Full Stack Developer
+      company: University of Louisiana - Monroe
+      location: Monroe, LA
+      date: Jan 2023 -- Present
+      achievements:
+          - Integrated \textbf{Microsoft Teams API} with \textbf{Drupal CMS} via \textbf{OAuth 2.0} to automate real-time messaging, file sharing, and cross-platform calendar synchronization, reducing manual administrative tasks from \textbf{4 hours to 30 minutes weekly}.
+          - Engineered a \textbf{Python/MySQL ETL pipeline} to transform and migrate \textbf{10,000+ legacy records} into \textbf{Drupal 10}, implementing \textbf{data validation scripts} and \textbf{normalized schemas} to reduce redundancy, accelerate query speeds by \textbf{15%}, and cut storage costs by \textbf{10%}.
+          - Automated \textbf{end-to-end testing} for \textbf{50+ department webpages} using \textbf{Selenium} and \textbf{Cypress}, integrating tests into a \textbf{CI/CD pipeline (GitHub Actions)} to boost pre-deployment issue detection by \textbf{75%} and reduce post-launch user-reported errors by \textbf{30%}.
+
+    - title: Software Developer
+      company: Clamphook - EdTech Startup
+      location: Lalitpur, NP
+      date: Oct 2022 -- May 2023
+      achievements:
+          - Developed a \textbf{Flask and React-based Computer-Based Testing (CBT) platform} with \textbf{Redis session caching} and \textbf{Nginx load balancing}, enabling \textbf{5,000+ concurrent users} and driving a \textbf{40% reduction in server latency} to support \textbf{5x enrollment growth}.
+          - Architected a \textbf{Docker-based microservices infrastructure} for \textbf{Flask backend APIs} and \textbf{React admin panels}, automating \textbf{CI/CD pipelines} with \textbf{GitHub Actions} to deploy a \textbf{React Native iOS app} that achieved \textbf{5,000+ downloads} and \textbf{99.9% uptime post-launch}.
+          - Designed a \textbf{real-time metrics dashboard} using \textbf{Chart.js} and \textbf{Flask-SocketIO}, integrated with \textbf{PostgreSQL query optimizations}, to increase student consistency by \textbf{8%} and content efficiency by \textbf{25%} through actionable data insights.
+
+projects:
+    - name: NoteMeet
+      description: Developed an \textbf{AI-powered meeting platform} with a focus on \textbf{scalable architecture} and \textbf{distributed processing} implementing \textbf{AWS Lambda} functions for serverless processing of audio data and used \textbf{DynamoDB} with optimized access patterns for efficient data retrieval. Applied \textbf{algorithm optimizations} to the transcription pipeline, reducing processing time by \textbf{35%} while maintaining accuracy.
+      link: https://notemeet.dineshchhantyal.com
+
+    - name: RhymeAI
+      description: Built a \textbf{multi-agent emcee platform} that \textbf{plans, scripts, and runs events end-to-end}, producing \textbf{schedules, slides, and multilingual voice-overs} and updating them in real time. Key features include \textbf{AI-generated emcee audio} and a \textbf{live dashboard} that tracks engagement and timing. Developed with \textbf{Gemini 2.5 Pro}, \textbf{ElevenLabs TTS}, and \textbf{TypeScript + Next.js}, it delivers seamless, engaging, data-driven events.
+      link: https://rhyme-ai.vercel.app/
+
+    - name: Dog \& Dog Breed Classifier
+      description: Engineered a \textbf{hybrid computer vision system} for multi-level classification, combining general animal detection with personalized pet recognition. Leveraged \textbf{transfer learning} with a pre-trained \textbf{VGG16} model for broad category identification (90%+ accuracy) and fine-tuned a custom head to recognize specific dogs from user images with over \textbf{85% accuracy}.
+      link: https://github.com/dineshchhantyal/dog-n-dog-breed-classification
+
+    - name: ASL Alphabet Classifier
+      description: Architected a high-accuracy \textbf{Convolutional Neural Network (CNN)} in \textbf{PyTorch}, leveraging a custom \textbf{data augmentation} pipeline to ensure model robustness on the ASL MNIST dataset. Dramatically accelerated multi-GPU training with PyTorch \textbf{Data Parallelism} and methodically refined the model via strategic \textbf{hyperparameter tuning}.
+      link: https://github.com/dineshchhantyal/asl
+
+skills:
+    - name: Programming Languages
+      items: Python, Java, SQL, JavaScript, TypeScript, C, Bash
+
+    - name: Data Science & Machine Learning
+      items: Deep Learning (PyTorch, TorchVision), Hugging Face Transformers, Computer Vision, Transfer Learning, Model Evaluation, Data Augmentation, Parallel Processing, Model Deployment (Databricks), Experiment Tracking (MLflow)
+
+    - name: Databases & Cloud
+      items: AWS (Lambda, S3, EC2, DynamoDB, EventBridge), GCP, MySQL, PostgreSQL, MongoDB, Data Warehousing, Data Lakes
+
+    - name: Software Development
+      items: Algorithms, Data Structures, OOP, RESTful APIs, GraphQL, Microservices, Version Control (Git)
+
+    - name: DevOps & Testing
+      items: CI/CD (GitHub Actions, Jenkins), Docker, Kubernetes, Terraform (for IaC), Unit Testing, Integration Testing, Test Automation
+
+    - name: Professional Skills
+      items: Problem-solving, Technical Documentation, Code Reviews, Agile Methodologies, Team Collaboration
+
+activities:
+    - name: Google Developer Group on Campus ULM, President
+      date: Aug 2024 -- Present
+
+    - name: IEEE Shreveport Section, Webmaster
+      date: Jan 2025 -- Present
+
+    - name: ICPC NA South Division 2024, State Champion
+      date: Nov 2024
+
+    - name: ULM Student Affairs, Student Council
+      date: Jan 2024 -- Present

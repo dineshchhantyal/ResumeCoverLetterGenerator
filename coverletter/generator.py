@@ -3,14 +3,16 @@ import os
 import subprocess
 import yaml
 from generators.base import DocumentGenerator
+
+
 class CoverLetterGenerator(DocumentGenerator):
     def __init__(self, yaml_file):
         super().__init__(yaml_file)
 
     def generate_cover_letter(self):
-        personal = self.data['personal_information']
-        recipient = self.data['recipient']
-        letter = self.data['letter']
+        personal = self.data["personal_information"]
+        recipient = self.data["recipient"]
+        letter = self.data["letter"]
 
         cover_letter = f"""
         {personal['name']}
@@ -46,41 +48,36 @@ class CoverLetterGenerator(DocumentGenerator):
         data = self.data.copy()
 
         # add % must be replaced with \%
-        data['letter']['body'] = data['letter']['body'].replace('%', '\\%')
+        data["letter"]["body"] = data["letter"]["body"].replace("%", "\\%")
 
         # Check and prompt only for placeholders that exist in the data
-        if '[Hiring Manager\'s Name]' in data['recipient']['name']:
+        if "[Hiring Manager's Name]" in data["recipient"]["name"]:
             manager_name = input("Enter hiring manager's name: ").strip()
-            data['recipient']['name'] = data['recipient']['name'].replace(
-                    '[Hiring Manager\'s Name]',
-                    manager_name
-                )
+            data["recipient"]["name"] = data["recipient"]["name"].replace(
+                "[Hiring Manager's Name]", manager_name
+            )
 
         # Only ask for company address if it contains the placeholder
-        if '[Company Address]' in data['recipient']['address']:
+        if "[Company Address]" in data["recipient"]["address"]:
             company_address = input("Enter company address: ").strip()
 
-            data['recipient']['address'] = data['recipient']['address'].replace(
-                '[Company Address]',
-                company_address
+            data["recipient"]["address"] = data["recipient"]["address"].replace(
+                "[Company Address]", company_address
             )
 
-        if '[Company Name]' in data['recipient']['address']:
-            data['recipient']['address'] = data['recipient']['address'].replace(
-                '[Company Name]',
-                company_name
+        if "[Company Name]" in data["recipient"]["address"]:
+            data["recipient"]["address"] = data["recipient"]["address"].replace(
+                "[Company Name]", company_name
             )
 
-        data['letter']['date'] = datetime.now().strftime("%Y-%m-%d")
+        data["letter"]["date"] = datetime.now().strftime("%Y-%m-%d")
 
-        data['letter']['opening'] = data['letter']['opening'].replace(
-            '[Company Name]',
-            company_name
+        data["letter"]["opening"] = data["letter"]["opening"].replace(
+            "[Company Name]", company_name
         )
 
-        data['letter']['body'] = data['letter']['body'].replace(
-            '[Company Name]',
-            company_name
+        data["letter"]["body"] = data["letter"]["body"].replace(
+            "[Company Name]", company_name
         )
 
         # Update the instance data
@@ -89,20 +86,20 @@ class CoverLetterGenerator(DocumentGenerator):
 
     def generate_tex(self, company_name):
         self.replace_placeholders(company_name)
-        personal = self.data['personal_information']
-        recipient = self.data['recipient']
-        letter = self.data['letter']
+        personal = self.data["personal_information"]
+        recipient = self.data["recipient"]
+        letter = self.data["letter"]
 
         content = [
             r"""
 \documentclass[11pt, letterpaper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
-\usepackage{times}
+\usepackage{charter}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{setspace}
-\usepackage{parskip}  % Removes paragraph indentation
+\usepackage{parskip}
 
 % Custom colors
 \definecolor{primary}{RGB}{45, 55, 72}
@@ -119,51 +116,50 @@ class CoverLetterGenerator(DocumentGenerator):
 }
 
 % Set paragraph spacing
-\setlength{\parindent}{0pt}  % No paragraph indentation
-\setlength{\parskip}{1em}    % Space between paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
 
 \begin{document}""",
-
             # Header section
             f"""
 \\begin{{flushright}}
 \\textcolor{{primary}}{{
-\\Large {personal['name']}\\\\[3pt]
+\\Large\\bfseries {personal['name']}\\\\[4pt]
 \\normalsize {personal['address']['line']}\\\\
-{personal['address']['postal_code']}, {personal['address']['country']}\\\\[3pt]
-{personal['phone']['mobile']} | {personal['email']}\\\\
-\\href{{{personal['homepage']}}}{{{personal['homepage']}}}
+{personal['address']['postal_code']}, {personal['address']['country']}\\\\[4pt]
+{personal['phone']['mobile']} $|$ \\href{{mailto:{personal['email']}}}{{{personal['email']}}} $|$ \\href{{{personal['homepage']}}}{{{personal['homepage']}}}
 }}
 \\end{{flushright}}
 
-\\vspace{{2em}}
+\\vspace{{1em}}
 \\noindent{{\\today}}
 
 \\vspace{{1em}}
 \\noindent{{
 {recipient['name']}\\\\
+{recipient.get('title', '')}\\\\
+{recipient['company']}\\\\
 {recipient['address']}
 }}
 
 \\vspace{{1.5em}}
-{letter['opening']}
+\\noindent {letter['opening']}
 
 {letter['body']}
 
 \\vspace{{1em}}
-{letter.get('closing', 'Sincerely')},
+\\noindent {letter.get('closing', 'Sincerely,')}
 
-\\vspace{{1.2em}}
-{personal['name']}
+\\vspace{{1.5em}}
+\\noindent {personal['name']}
 
 \\vspace{{0.5em}}
 \\noindent{{\\textcolor{{accent}}{{\\small{{{letter['enclosure']}}}}}}}
 """,
-
-            r"\end{document}"
+            r"\end{document}",
         ]
 
-        return '\n'.join(content)
+        return "\n".join(content)
 
     def save_cover_letter(self, yaml_file, output_dir, company_name):
         os.makedirs(output_dir, exist_ok=True)
@@ -172,7 +168,7 @@ class CoverLetterGenerator(DocumentGenerator):
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         tex_file = os.path.join(output_dir, f"cover_letter_{timestamp}.tex")
 
-        with open(tex_file, 'w', encoding='utf-8') as tex:
+        with open(tex_file, "w", encoding="utf-8") as tex:
             tex.write(tex_content)
 
         return tex_file
@@ -182,7 +178,6 @@ class CoverLetterGenerator(DocumentGenerator):
         # First generate the tex file
         try:
             tex_file = self.save_cover_letter(yaml_file, output_dir, company_name)
-
 
             # Then compile it to PDF
             pdf_file = self.compile_pdf(tex_file, output_dir)
@@ -195,7 +190,6 @@ class CoverLetterGenerator(DocumentGenerator):
             print(f"Failed to generate PDF: {str(e)}")
             raise
 
-
     def compile_pdf(self, tex_file, output_dir):
         """Compile LaTeX file to PDF using pdflatex"""
         try:
@@ -203,11 +197,11 @@ class CoverLetterGenerator(DocumentGenerator):
 
             # More thorough diagnostics
             diagnostic_commands = [
-                ('kpsewhich moderncv.cls', 'Checking moderncv location'),
-                ('kpsewhich -var-value=TEXMFHOME', 'Checking TEXMFHOME'),
-                ('kpsewhich -var-value=TEXMFLOCAL', 'Checking TEXMFLOCAL'),
-                ('kpsewhich -var-value=TEXMFSYSVAR', 'Checking TEXMFSYSVAR'),
-                ('texhash --verbose', 'Refreshing TeX database'),
+                ("kpsewhich moderncv.cls", "Checking moderncv location"),
+                ("kpsewhich -var-value=TEXMFHOME", "Checking TEXMFHOME"),
+                ("kpsewhich -var-value=TEXMFLOCAL", "Checking TEXMFLOCAL"),
+                ("kpsewhich -var-value=TEXMFSYSVAR", "Checking TEXMFSYSVAR"),
+                ("texhash --verbose", "Refreshing TeX database"),
             ]
 
             diagnostic_info = []
@@ -216,26 +210,32 @@ class CoverLetterGenerator(DocumentGenerator):
                 diagnostic_info.append(f"{desc}:\n{result.stdout or result.stderr}")
 
             # Check if moderncv is installed
-            result = subprocess.run(['kpsewhich', 'moderncv.cls'],
-                                  capture_output=True, text=True)
+            result = subprocess.run(
+                ["kpsewhich", "moderncv.cls"], capture_output=True, text=True
+            )
             if result.returncode != 0:
                 raise Exception(
-                    "moderncv LaTeX class not found. Diagnostic information:\n\n" +
-                    "\n".join(diagnostic_info) +
-                    "\n\nTry running:\n" +
-                    "1. sudo texhash\n" +
-                    "2. mktexlsr\n" +
-                    "3. Check if the file exists: find /usr/local/texlive -name 'moderncv.cls'"
+                    "moderncv LaTeX class not found. Diagnostic information:\n\n"
+                    + "\n".join(diagnostic_info)
+                    + "\n\nTry running:\n"
+                    + "1. sudo texhash\n"
+                    + "2. mktexlsr\n"
+                    + "3. Check if the file exists: find /usr/local/texlive -name 'moderncv.cls'"
                 )
 
             # Run pdflatex twice to ensure proper generation of references
             for _ in range(2):
-                result = subprocess.run([
-                    'pdflatex',
-                    '-interaction=nonstopmode',
-                    '-output-directory=' + output_dir,
-                    tex_file
-                ], check=True, capture_output=True, text=True)
+                result = subprocess.run(
+                    [
+                        "pdflatex",
+                        "-interaction=nonstopmode",
+                        "-output-directory=" + output_dir,
+                        tex_file,
+                    ],
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                )
 
                 # Print LaTeX compilation output if there's an error
                 if result.returncode != 0:
@@ -245,18 +245,19 @@ class CoverLetterGenerator(DocumentGenerator):
 
             # Clean up auxiliary files
             base_name = os.path.splitext(tex_file)[0]
-            for ext in ['.aux', '.log', '.out']:
+            for ext in [".aux", ".log", ".out"]:
                 aux_file = base_name + ext
                 if os.path.exists(aux_file):
                     os.remove(aux_file)
 
-            pdf_file = base_name + '.pdf'
+            pdf_file = base_name + ".pdf"
             if os.path.exists(pdf_file):
                 return pdf_file
             else:
                 raise Exception("PDF file was not generated")
         except Exception as e:
             raise Exception(f"Failed to generate PDF: {str(e)}")
+
 
 # Example Usage
 # generator = CoverLetterGenerator('cover_letter.yml')
