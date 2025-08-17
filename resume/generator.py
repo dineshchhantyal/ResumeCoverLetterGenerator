@@ -157,6 +157,9 @@ class ResumeGenerator(DocumentGenerator):
                 content.append(f"\\resumeItem{{{escaped_achievement}}}")
             content.append("\\resumeItemListEnd")
 
+            # Add extra spacing between jobs
+            content.append("\\vspace{6pt}")
+
         content.append("\\resumeSubHeadingListEnd")
         return "\n".join(content)
 
@@ -166,9 +169,15 @@ class ResumeGenerator(DocumentGenerator):
         content.append("\\section*{\\textbf{Projects}}")
         content.append("\\resumeItemListStart{}")
         for project in projects:
-            content.append(
-                f"\\resumeItem{{\\textbf{{{project['name']}}} | {self.escape_latex(project['description'])} | \\href{{{project['link']}}}{{\\textcolor{{blue}}{{\\underline{{Link}}}}}}}}"
-            )
+            name = self.escape_latex(project.get("name", ""))
+            description = self.escape_latex(project.get("description", ""))
+            link = project.get("link")
+            if link:
+                # Make the project name itself a hyperlink (no visual indication in PDF)
+                item = f"\\resumeItem{{\\href{{{link}}}{{\\textbf{{{name}}}}} | {description}}}"
+            else:
+                item = f"\\resumeItem{{\\textbf{{{name}}} | {description}}}"
+            content.append(item)
         content.append("\\resumeItemListEnd")
         return "\n".join(content)
 
@@ -216,18 +225,33 @@ class ResumeGenerator(DocumentGenerator):
 
     def generate_resume(self, yaml_file):
         """Generate the complete LaTeX resume from YAML"""
+        # Optional sections
+        summary_text = self.data.get("summary")
+        activities = self.data.get("activities", []) or self.data.get("leadership", [])
 
         content = [
             self.latex_preamble,
             "\\begin{document}",
             self.generate_header(self.data.get("personal", {})),
-            self.generate_experience(self.data.get("experience", [])),
-            self.generate_projects(self.data.get("projects", [])),
-            self.generate_skills(self.data.get("skills", [])),
-            self.generate_education(self.data.get("education", [])),
-            self.generate_activities(self.data.get("activities", [])),
-            "\\end{document}",
         ]
+
+        if summary_text:
+            content.append("\\section*{\\textbf{Summary}}")
+            content.append("\\small{" + self.escape_latex(summary_text.strip()) + "}")
+
+        content.extend(
+            [
+                self.generate_experience(self.data.get("experience", [])),
+                self.generate_projects(self.data.get("projects", [])),
+                self.generate_skills(self.data.get("skills", [])),
+                self.generate_education(self.data.get("education", [])),
+            ]
+        )
+
+        if activities:
+            content.append(self.generate_activities(activities))
+
+        content.append("\\end{document}")
 
         return "\n\n".join(content)
 

@@ -7,7 +7,7 @@ personal:
     linkedin: https://linkedin.com/in/dineshchhantyal
 
 summary: |
-    Dedicated Computer Science student with expertise in Python, web frameworks (FastAPI, Flask), and cloud-scale data engineering. Proven ability to design scalable systems, optimize data pipelines, and deliver impactful software solutions. Passionate about leveraging technology to innovate in health-tech and improve patient outcomes.
+    Award-winning Full Stack Engineer & \textbf{GDSC President} shipping \textbf{AI-native} solutions with \textbf{React/Next.js} frontend architecture, \textbf{Python/Node.js} APIs & \textbf{cloud-based} infrastructure; \textbf{ICPC State Champion} turning \textbf{GenAI + RAG} concepts into intuitive, user-facing features.
 
 education:
     - name: University of Louisiana at Monroe
@@ -23,71 +23,68 @@ experience:
       location: New York, NY
       date: July 2025 -- Aug 2025
       achievements:
-          - Built a scalable, \textbf{production-grade image processing pipeline} to handle \textbf{1.2TB of cryo-EM and whole-slide images}, collaborating with computational biologists to parallelize processing via \textbf{SLURM job arrays}, \textbf{PyTorch + Triton kernels}, and \textbf{Ceph/S3} data access.
-          - Improved cellular classification model to a \textbf{0.91 macro F1-score} by developing a \textbf{spatio-temporal 3D-CNN} over \textbf{4-channel inputs} (volumetric frames + segmentation masks), in coordination with domain experts across \textbf{600+ timepoints} and \textbf{25,000+ cells}.
-          - Launched \textbf{Chart-Gizmos}, an open-source \textbf{Python library} for browser-based scientific visualizations, integrating \textbf{Chart.js} into \textbf{H5Gizmos} with a modular API, full documentation, and collaborative design input from cross-functional teams.
-          - Orchestrated a distributed inference and visualization pipeline for millions of nucleus state predictions, achieving a \textbf{22x speedup} (45 min to 2 min) on a \textbf{10-GPU cluster} (\textbf{8xV100}, \textbf{2xA100}) through optimized batching, mixed-precision, and close iteration with data scientists.
+          - Built \textbf{PyQt-based} 3D exploration pipeline for \textbf{1.2TB} of cryo-EM imagery in close collaboration with biologists, data scientists, and ground truth labelers, using \textbf{sliding window techniques} and \textbf{Ceph/S3} storage to create high-fidelity training datasets.
+          - Accelerated cell nucleus motion tracking pipeline \textbf{22x} (45→2 min) for embryonic development movies on \textbf{10-GPU cluster} (8xV100, 2xA100) through optimized batching, mixed-precision inference, and parallel frame processing.
+          - Improved cellular classification to \textbf{0.91 F1-score} by designing a custom \textbf{spatio-temporal 3D-CNN} with domain-specific augmentation strategies and iterative label refinement for accurate tracking across \textbf{600+ timepoints} and \textbf{25K+ cells}.
+          - Created \textbf{Chart-Gizmos}, an open-source visualization library integrating \textbf{Python}, \textbf{Chart.js}, and \textbf{H5Gizmos} for interactive data exploration.
 
     - title: Software Engineer
       company: University of Louisiana - Monroe
       location: Monroe, LA
       date: Jan 2023 -- Present
       achievements:
-          - Integrated \textbf{Microsoft Teams API} with \textbf{Drupal CMS} via \textbf{OAuth 2.0} for real-time messaging and calendar synchronization, reducing administrative tasks from \textbf{4 hours to 30 minutes weekly}.
-          - Devised a \textbf{Python/MySQL/ETL pipeline} to migrate \textbf{10,000+ legacy records} into \textbf{Drupal 10}, optimizing schemas to accelerate query speeds by \textbf{15%} and cut storage costs by \textbf{10%}.
-          - Automated end-to-end testing for \textbf{50+ webpages} using \textbf{Selenium} and \textbf{Cypress}, integrating into a \textbf{CI/CD pipeline} to boost pre-deployment issue detection by \textbf{75%}.
+          - Integrated \textbf{Microsoft Teams API} with \textbf{Drupal CMS} via \textbf{OAuth 2.0} for real-time messaging and calendar synchronization, streamlining workflows and reducing administrative overhead from \textbf{4 hours to 30 minutes weekly}.
+          - Engineered a \textbf{Node.js/TypeScript/MySQL/ETL pipeline} to migrate \textbf{10,000+ legacy records} into \textbf{Drupal 10}, optimizing database schemas to accelerate query performance by \textbf{15%} and reduce storage costs by \textbf{10%} for improved system efficiency.
+          - Automated end-to-end testing for \textbf{50+ webpages} using \textbf{Selenium} and \textbf{Cypress}, integrating into a \textbf{CI/CD pipeline} with \textbf{GitLab} to enhance deployment reliability and boost pre-deployment issue detection by \textbf{75%}.
 
     - title: Software Developer
       company: Clamphook - EdTech
       location: Lalitpur, NP
       date: Oct 2022 -- May 2023
       achievements:
-          - Spearheaded a \textbf{FastAPI (Flask)} and \textbf{React}-based Computer-Based Testing (CBT) platform with \textbf{Redis} caching and \textbf{Nginx} load balancing, enabling \textbf{5,000+ concurrent users} to support \textbf{5x enrollment growth} in an \textbf{Agile Scrum} environment.
-          - Architected a \textbf{Docker}-based microservices infrastructure and automated \textbf{CI/CD} pipelines with \textbf{GitHub Actions}, achieving \textbf{99.9% uptime} for a \textbf{Next.js}-powered web application and \textbf{React Native} iOS app with \textbf{5,000+ downloads}.
-          - Pioneered a real-time analytics dashboard with Duolingo-inspired gamification, using \textbf{Flask-SocketIO} and \textbf{Chart.js} to drive an \textbf{8% increase in student engagement} and a \textbf{25% improvement in content efficiency} through interactive performance insights.
+          - Spearheaded a \textbf{Node.js} and \textbf{React}-based Computer-Based Testing (CBT) platform with \textbf{Redux Trunk} state management, \textbf{Redis} caching, and \textbf{NGINX} load balancing, implementing optimized API endpoints to support \textbf{5,000+ concurrent users} and \textbf{5x enrollment growth}.
+          - Architected a \textbf{Docker/Kubernetes}-based microservices infrastructure with \textbf{Helm} charts and automated \textbf{CI/CD} pipelines using \textbf{GitLab}, achieving \textbf{99.9% uptime} for production applications with \textbf{5,000+ downloads} on App Store.
+          - Developed real-time analytics dashboard with \textbf{TypeScript}, \textbf{MongoDB}, and \textbf{Chart.js}, featuring a gamified Duolingo-style progress tracking interface that drove an \textbf{8% increase} in user engagement and improved student retention.
+          - Conducted \textbf{code reviews}, documented \textbf{API specifications}, and troubleshot production issues while collaborating with cross-functional teams (design, product, QA) in a startup environment.
+
+    - title: Software Developer Intern
+      company: Padhao Academy
+      location: Remote
+      date: Oct 2021 -- Dec 2021
+      achievements:
+          - Implemented a secure authentication system with \textbf{JWT tokens} and \textbf{RBAC architecture} for a \textbf{Next.js} educational platform, ensuring \textbf{GDPR compliance} for 5,000+ student accounts and supporting multiple permission levels for students, instructors, and administrators.
+          - Optimized frontend performance using \textbf{Next.js}, \textbf{TypeScript}, and \textbf{Tailwind CSS} with strategic component lazy loading and state management, resulting in a \textbf{35% reduction} in page load times and improved user experience metrics.
+          - Enhanced platform discoverability through implementation of \textbf{Next.js SSR}, dynamic routing, \textbf{structured data markup} (Open Graph + JSON-LD), and intelligent resource prefetching, leading to measurable improvements in organic search rankings and user acquisition.
 
 projects:
-    - name: NoteMeet
-      description: Architected an \textbf{AI-powered meeting assistant} that automates meeting \textbf{joining, recording, summarization, and action extraction}. Implemented a \textbf{Retrieval-Augmented Generation (RAG) system} for enhanced AI accuracy. Built on a \textbf{highly scalable, event-driven AWS Infrastructure} for serverless audio/video processing, seamlessly integrated with \textbf{Google Meet}.
-      link: https://notemeet.dineshchhantyal.com
-
     - name: RhymeAI
-      description: Pioneered a \textbf{multi-agent AI Emcee platform} that automates live event hosting by generating \textbf{event narratives, scripts, and studio-grade multilingual voice-overs}. Orchestrated specialized AI agents using \textbf{Gemini 2.5 Pro} to plan event flows and adapt content in real time, while leveraging \textbf{ElevenLabs TTS} and \textbf{Veo} to deliver a flawless, human-like emcee performance for a more engaging audience experience.
+      description: AI-powered event management platform featuring an intelligent virtual emcee that uses \textbf{multi-agent orchestration} (\textbf{Gemini}, \textbf{LangChain}, ElevenLabs) to plan and adapt to real-time situations. (Selected for \textbf{Nexus Technology Cup})
       link: https://rhyme-ai.vercel.app/
 
-    - name: OfferMart - Sustainable Marketplace
-      description: Engineered a \textbf{sustainable marketplace} to combat food waste by linking retailers, consumers, and delivery services for near-expiry products. Implemented \textbf{role-based access control (RBAC)} to secure user interactions and integrated an \textbf{AI-driven verification system} powered by \textbf{TensorFlow.js}, enabling \textbf{real-time product condition analysis} through computer vision. Optimized resource allocation with a \textbf{serverless architecture} and \textbf{dynamic pricing}, significantly reducing waste while showcasing advanced software engineering practices.
+    - name: NoteMeet
+      description: AI meeting assistant with \textbf{React} front-end, serverless \textbf{FastAPI}, and \textbf{Terraform}-managed \textbf{AWS} stack (\textbf{Lambda}, \textbf{S3}, \textbf{DynamoDB}, Transcribe) for automatic recording, transcription, and \textbf{RAG}-powered summaries that cut manual note effort by \textbf{80%}. (\textbf{Tech Expo Winner})
+      link: https://notemeet.dineshchhantyal.com
+
+    - name: OfferMart
+      description: Full stack sustainable reselling marketplace (\textbf{Next.js}, \textbf{Node.js}, \textbf{MongoDB}) with \textbf{RBAC auth}, real-time verification, \textbf{dynamic pricing} logic, and \textbf{Stripe} integration; scales to \textbf{1,000+ concurrent transactions} with strong data integrity guarantees.
       link: https://offermart.vercel.app/
 
-    - name: Dog \& Dog Breed Classifier
-      description: Created a sophisticated, \textbf{two-stage hybrid vision system} for multi-level classification. Leveraged \textbf{transfer learning} with a pre-trained \textbf{VGG16} model for general breed identification (\textbf{90%+} accuracy). Built and fine-tuned a \textbf{custom recognition head} on user-provided images to enable \textbf{personalized identification of specific pets} with over \textbf{85%} accuracy, bridging the gap between general and specific recognition.
-      link: https://github.com/dineshchhantyal/dog-n-dog-breed-classification
+    - name: CodeStroke Pro
+      description: \textbf{FastAPI} clinical decision support system with form-driven workflows for stroke protocols and medication dosing, featuring responsive \textbf{React} UI and comprehensive audit trails that reduced decision latency by \textbf{40%}. (Helps save lives)
+      link: https://codestrokepro.org
 
 skills:
-    - name: Programming Languages \& Frameworks
-      items: JavaScript (ES6+), TypeScript, Python, Java, SQL, Bash, C
-
-    - name: Frontend Development
-      items: React, Next.js, HTML5, CSS3, Sass, Tailwind CSS, Figma, Responsive Design, UX Collaboration
-
-    - name: Backend \& API Development
-      items: FastAPI, Flask, Node.js, TypeScript, Express, REST APIs, Microservices, Django, Pydantic, GraphQL, OpenAI, Serverless Architecture, API Design, Scalable Web Services, SDK Development/Support, MongoDB, NoSQL
-
+    - name: Frontend
+      items: React.js, Next.js, TypeScript, JavaScript (ES6+), HTML5/CSS3, Tailwind CSS, Responsive Design, Component-Driven Development
+    - name: Backend / APIs
+      items: Python, Node.js, FastAPI, Express, RESTful API Design, WebSockets, Authentication \& RBAC, API Gateway
+    - name: Databases \& Data
+      items: MongoDB, MySQL, PostgreSQL, Redis, Data Modeling, ETL, Caching
+    - name: AI / Automation
+      items: RAG, Vector Databases, LLM Orchestration, OpenAI API, Gemini, GitHub Copilot, Generative AI, PyTorch, TensorFlow
     - name: DevOps \& Cloud
-      items: AWS (Lambda, S3, EC2, DynamoDB), GCP, Docker, Kubernetes, Terraform (IaC), NGINX, CI/CD (GitHub Actions, Jenkins)
-
-    - name: Tools \& Collaboration
-      items: Git, GitHub, Agile, Scrum, Documentation, Mentorship, Open Source Contributions, NumPy, Pandas
-
-    - name: AI \& Machine Learning
-      items: Deep Learning, PyTorch, Hugging Face, Scikit-learn, Computer Vision, MLflow, LangChain, RAG, MCP
-
-activities:
-    - name: Google Developer Group on Campus ULM, President
-      date: Aug 2024 -- Present
-
-    - name: IEEE Shreveport Section, Webmaster
-      date: Jan 2025 -- Present
-
-    - name: ICPC NA South Division 2024 Coding Competition, State Champion
-      date: Nov 2024
+      items: AWS (Lambda, S3, DynamoDB), GCP, Docker, Kubernetes, Terraform, CI/CD, Microservices, Cloud-Native Applications
+    - name: Testing \& Quality
+      items: Cypress, Selenium, Unit/Integration Testing, Regression Suites, Continuous Testing
+    - name: Other
+      items: Git, Agile/Scrum, Code Review, Documentation, Performance Optimization

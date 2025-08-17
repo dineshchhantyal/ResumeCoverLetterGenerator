@@ -19,12 +19,12 @@ class CoverLetterGenerator(DocumentGenerator):
         {personal.get('title', '')}
         {personal['address']['line']}, {personal['address']['postal_code']}, {personal['address']['country']}
         Mobile: {personal['phone']['mobile']}
-        Fixed: {personal['phone']['fixed']}
-        Fax: {personal['phone']['fax']}
+        Fixed: {personal['phone'].get('fixed','')}
+        Fax: {personal['phone'].get('fax','')}
         Email: {personal['email']}
         Homepage: {personal['homepage']}
-        Extra Info: {personal['extra_info']}
-        Quote: {personal['quote']}
+        Extra Info: {personal.get('extra_info','')}
+        Quote: {personal.get('quote','')}
 
         To: {recipient['name']}
         Address: {recipient['address']}
@@ -44,43 +44,29 @@ class CoverLetterGenerator(DocumentGenerator):
         Interactively ask user for missing placeholder values in the YAML data.
         Only prompts for values that contain placeholder text.
         """
-        # Deep copy the data to avoid modifying the original
         data = self.data.copy()
-
-        # add % must be replaced with \%
         data["letter"]["body"] = data["letter"]["body"].replace("%", "\\%")
-
-        # Check and prompt only for placeholders that exist in the data
         if "[Hiring Manager's Name]" in data["recipient"]["name"]:
             manager_name = input("Enter hiring manager's name: ").strip()
             data["recipient"]["name"] = data["recipient"]["name"].replace(
                 "[Hiring Manager's Name]", manager_name
             )
-
-        # Only ask for company address if it contains the placeholder
         if "[Company Address]" in data["recipient"]["address"]:
             company_address = input("Enter company address: ").strip()
-
             data["recipient"]["address"] = data["recipient"]["address"].replace(
                 "[Company Address]", company_address
             )
-
         if "[Company Name]" in data["recipient"]["address"]:
             data["recipient"]["address"] = data["recipient"]["address"].replace(
                 "[Company Name]", company_name
             )
-
         data["letter"]["date"] = datetime.now().strftime("%Y-%m-%d")
-
         data["letter"]["opening"] = data["letter"]["opening"].replace(
             "[Company Name]", company_name
         )
-
         data["letter"]["body"] = data["letter"]["body"].replace(
             "[Company Name]", company_name
         )
-
-        # Update the instance data
         self.data = data
         return data
 
@@ -100,6 +86,7 @@ class CoverLetterGenerator(DocumentGenerator):
 \usepackage{hyperref}
 \usepackage{setspace}
 \usepackage{parskip}
+\usepackage{enumitem}
 
 % Custom colors
 \definecolor{primary}{RGB}{45, 55, 72}
@@ -119,8 +106,10 @@ class CoverLetterGenerator(DocumentGenerator):
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
 
+% Compact list style
+\setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=2pt, parsep=0pt, partopsep=0pt}
+
 \begin{document}""",
-            # Header section
             f"""
 \\begin{{flushright}}
 \\textcolor{{primary}}{{
@@ -163,67 +152,26 @@ class CoverLetterGenerator(DocumentGenerator):
 
     def save_cover_letter(self, yaml_file, output_dir, company_name):
         os.makedirs(output_dir, exist_ok=True)
-
         tex_content = self.generate_tex(company_name)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         tex_file = os.path.join(output_dir, f"cover_letter_{timestamp}.tex")
-
         with open(tex_file, "w", encoding="utf-8") as tex:
             tex.write(tex_content)
-
         return tex_file
 
     def generate_pdf(self, yaml_file, output_dir, company_name):
-        """Generate PDF from YAML file"""
-        # First generate the tex file
         try:
             tex_file = self.save_cover_letter(yaml_file, output_dir, company_name)
-
-            # Then compile it to PDF
             pdf_file = self.compile_pdf(tex_file, output_dir)
-
-            # delete tex file
             os.remove(tex_file)
-
             return pdf_file
         except Exception as e:
             print(f"Failed to generate PDF: {str(e)}")
             raise
 
     def compile_pdf(self, tex_file, output_dir):
-        """Compile LaTeX file to PDF using pdflatex"""
         try:
             output_dir = os.path.dirname(tex_file)
-
-            # More thorough diagnostics
-            diagnostic_commands = [
-                ("kpsewhich moderncv.cls", "Checking moderncv location"),
-                ("kpsewhich -var-value=TEXMFHOME", "Checking TEXMFHOME"),
-                ("kpsewhich -var-value=TEXMFLOCAL", "Checking TEXMFLOCAL"),
-                ("kpsewhich -var-value=TEXMFSYSVAR", "Checking TEXMFSYSVAR"),
-                ("texhash --verbose", "Refreshing TeX database"),
-            ]
-
-            diagnostic_info = []
-            for cmd, desc in diagnostic_commands:
-                result = subprocess.run(cmd.split(), capture_output=True, text=True)
-                diagnostic_info.append(f"{desc}:\n{result.stdout or result.stderr}")
-
-            # Check if moderncv is installed
-            result = subprocess.run(
-                ["kpsewhich", "moderncv.cls"], capture_output=True, text=True
-            )
-            if result.returncode != 0:
-                raise Exception(
-                    "moderncv LaTeX class not found. Diagnostic information:\n\n"
-                    + "\n".join(diagnostic_info)
-                    + "\n\nTry running:\n"
-                    + "1. sudo texhash\n"
-                    + "2. mktexlsr\n"
-                    + "3. Check if the file exists: find /usr/local/texlive -name 'moderncv.cls'"
-                )
-
-            # Run pdflatex twice to ensure proper generation of references
             for _ in range(2):
                 result = subprocess.run(
                     [
@@ -236,25 +184,18 @@ class CoverLetterGenerator(DocumentGenerator):
                     capture_output=True,
                     text=True,
                 )
-
-                # Print LaTeX compilation output if there's an error
                 if result.returncode != 0:
-                    print("LaTeX Error Output:")
                     print(result.stdout)
                     print(result.stderr)
-
-            # Clean up auxiliary files
             base_name = os.path.splitext(tex_file)[0]
             for ext in [".aux", ".log", ".out"]:
                 aux_file = base_name + ext
                 if os.path.exists(aux_file):
                     os.remove(aux_file)
-
             pdf_file = base_name + ".pdf"
             if os.path.exists(pdf_file):
                 return pdf_file
-            else:
-                raise Exception("PDF file was not generated")
+            raise Exception("PDF file was not generated")
         except Exception as e:
             raise Exception(f"Failed to generate PDF: {str(e)}")
 

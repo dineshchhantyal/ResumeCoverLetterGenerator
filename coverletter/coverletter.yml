@@ -10,21 +10,33 @@ personal_information:
     homepage: "https://www.dineshchhantyal.com"
 
 recipient:
-    name: "Hiring Team at MyDataProduct"
-    company: "MyDataProduct"
-    title: "Full-stack Web Development Intern"
-    address: "Remote"
+    name: "Hiring Team"
+    company: "Cambridge Mobile Telematics"
+    title: "Software Engineer II, Back End"
+    address: "Cambridge, MA"
 
 letter:
-    date: "August 5, 2025"
-    opening: "Dear Hiring Team at MyDataProduct,"
+    date: "August 16, 2025"
+    opening: "Dear Cambridge Mobile Telematics Hiring Team,"
     body: |
-        I am thrilled to apply for the Full-stack Web Development Intern position at MyDataProduct. As a Computer Science senior at the University of Louisiana at Monroe with a 4.0 GPA, I bring hands-on experience in Python, React.js, and cloud-based infrastructure, aligning closely with the requirements of this role.
+        I am excited to apply for the Software Engineer II, Back End position at Cambridge Mobile Telematics. With my experience in Python development, AWS cloud services, and building scalable backend systems, I am eager to contribute to CMT's mission of making the world's roads and drivers safer through innovative technology.
 
-        During my internship at the Simons Foundation, I developed an interactive, \textbf{PyQt-based parallel processing pipeline} with \textbf{3D visualization tools}, processing \textbf{1.2TB of raw cryo-EM and whole-slide images}. This project honed my skills in modular thinking, efficient I/O optimization, and integrating cloud-based storage solutions like Ceph/S3. Additionally, I have built full-stack applications using \textbf{React.js}, \textbf{Tailwind CSS}, and \textbf{Node.js}, and have experience deploying Dockerized applications on cloud platforms.
+        Based on your job requirements, I believe my technical skills and experiences align well with what you're seeking:
 
-        My passion for creating scalable, user-centric solutions aligns with MyDataProduct's mission to engineer data-empowered software. I am particularly excited about the opportunity to work on ML-enabled capabilities and synergistic data integrations, leveraging my background in Python and API development.
+        \begin{itemize}
+            \item \textbf{Python \& Backend Development:} Throughout my career, I've developed scalable backend applications using Python, implementing complex data processing pipelines and RESTful APIs. At the University of Louisiana - Monroe, I built Python-based services that processed large volumes of data with AWS integration, significantly improving system performance and reliability.
 
-        I would welcome the opportunity to contribute to MyDataProduct's innovative projects and collaborate with your talented team. Thank you for considering my application.
-    closing: "Best regards,"
+            \item \textbf{AWS \& Containerization:} I have extensive experience with AWS services including EC2, S3, Lambda, SNS, and SQS for building robust cloud applications. I've implemented Docker containerization for consistent development and deployment environments, and created CI/CD pipelines to streamline the development process and ensure code quality.
+
+            \item \textbf{Problem Solving \& Collaboration:} I thrive in solving complex technical problems through creative approaches and data-driven decision making. My experience includes translating business and functional specifications into technical solutions while collaborating closely with cross-functional teams to ensure requirements are met accurately and efficiently.
+        \end{itemize}
+
+        I particularly value CMT's hybrid work environment and am fully comfortable with commuting to the Cambridge office three days per week. During my past roles, I've successfully navigated hybrid work arrangements with scheduled in-office collaboration days, maintaining productivity and strong team connections through clear communication channels and effective documentation practices.
+
+        What particularly excites me about joining Cambridge Mobile Telematics is the opportunity to contribute to technology that genuinely improves road safety and saves lives. I'm drawn to CMT's mission of using AI and IoT data to create meaningful insights about driver behavior, and I'm eager to apply my skills in backend development and data processing to help advance this important work.
+
+        I thrive in collaborative environments and have a proven track record of working effectively in cross-functional teams. My experience with Linux development, code reviews, and continuous integration practices has consistently resulted in high-quality, maintainable code—particularly important in CMT's environment where reliability and performance are critical.
+
+        I am confident that my technical skills, problem-solving abilities, and passion for making a positive impact would make me a valuable addition to your team. I welcome the opportunity to discuss how my background aligns with CMT's needs and how I can contribute to your ongoing success in making roads safer through innovative technology.
+    closing: "Sincerely,"
     enclosure: "Enclosure: Resume"
