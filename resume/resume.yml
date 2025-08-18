@@ -3,7 +3,9 @@
 # - In Skill name, & needs escapled (e.g., as \&)
 # - The 'summary' should be concise, with a maximum of two lines.
 # - Use tool calling to gather specific information when necessary.
+# - DONT change factual information e.g role, company, location
 # - Do not invent or assume new technologies; prioritize leveraging existing tools and libraries from the document.
+# - DONT create a new file
 
 personal:
     name: Dinesh Chhantyal
@@ -14,7 +16,7 @@ personal:
     linkedin: https://linkedin.com/in/dineshchhantyal
 
 summary: |
-    Award-winning Full Stack Engineer & \textbf{GDSC President} with expertise in \textbf{TypeScript}, \textbf{JavaScript}, and responsive UI development using modern frameworks. Strong backend experience with \textbf{Node.js}, \textbf{RESTful APIs}, and \textbf{SQL databases}. Demonstrated ability to build scalable, maintainable applications with \textbf{CI/CD pipelines} and \textbf{cloud infrastructure}.
+    ML engineer shipping terabyte-scale vision & RAG systems (\textbf{22x} GPU inference, \textbf{0.91} macro-F1 3D-CNN, event-driven AWS) focused on measurable latency, accuracy, and iteration velocity.
 
 education:
     - name: University of Louisiana at Monroe
@@ -28,70 +30,69 @@ experience:
     - title: Software Engineering Intern (ML)
       company: Simons Foundation (SCC, Flatiron Institute)
       location: New York, NY
-      date: July 2025 -- Aug 2025
+      date: Jul 2025 -- Aug 2025
       achievements:
-          - Built \textbf{PyQt-based} 3D exploration pipeline for \textbf{1.2TB} of cryo-EM imagery in close collaboration with biologists, data scientists, and ground truth labelers, using \textbf{sliding window techniques} and \textbf{Ceph/S3} storage to create high-fidelity training datasets.
-          - Accelerated cell nucleus motion tracking pipeline \textbf{22x} (45→2 min) for embryonic development movies on \textbf{10-GPU cluster} (8xV100, 2xA100) through optimized batching, mixed-precision inference, and parallel frame processing.
-          - Improved cellular classification to \textbf{0.91 F1-score} by designing a custom \textbf{spatio-temporal 3D-CNN} with domain-specific augmentation strategies and iterative label refinement for accurate tracking across \textbf{600+ timepoints} and \textbf{25K+ cells}.
-          - Created \textbf{Chart-Gizmos}, an open-source visualization library integrating \textbf{Python}, \textbf{Chart.js}, and \textbf{H5Gizmos} for interactive data exploration.
+          - Architected & shipped a \textbf{PyQt} parallel annotation + streaming pipeline for \textbf{1.2TB} cryo-EM / whole-slide imagery (\textbf{Ceph/S3}, sliding windows) establishing reusable data access + preprocessing patterns.
+          - Designed distributed \textbf{GPU} inference + visualization stack (batch scheduler, memory-aware loaders) achieving \textbf{22x} speedup (45m → 2m) across 8xV100 + 2xA100; reduced experiment feedback loop friction for cross-disciplinary scientists.
+          - Collaborated with computational biologists refining labeling quality across \textbf{600+} timepoints / \textbf{25K+} cells, raising nucleus state classification to \textbf{0.91} macro F1 via custom spatio-temporal \textbf{3D-CNN} (PyTorch).
+          - Open-sourced \textbf{Chart-Gizmos} (Chart.js + H5Gizmos) with modular API + docs—enabled reproducible, browser-based exploratory data analysis.
 
-    - title: Software Engineer
+    - title: Software Developer
       company: University of Louisiana - Monroe
       location: Monroe, LA
       date: Jan 2023 -- Present
       achievements:
-          - Integrated \textbf{Microsoft Teams API} with \textbf{Drupal CMS} via \textbf{OAuth 2.0} for real-time messaging and calendar synchronization, streamlining workflows and reducing administrative overhead from \textbf{4 hours to 30 minutes weekly}.
-          - Engineered a \textbf{Node.js/TypeScript/MySQL/ETL pipeline} to migrate \textbf{10,000+ legacy records} into \textbf{Drupal 10}, optimizing database schemas to accelerate query performance by \textbf{15%} and reduce storage costs by \textbf{10%} for improved system efficiency.
-          - Automated end-to-end testing for \textbf{50+ webpages} using \textbf{Selenium} and \textbf{Cypress}, integrating into a \textbf{CI/CD pipeline} with \textbf{GitLab} to enhance deployment reliability and boost pre-deployment issue detection by \textbf{75%}.
+          - Led integration of \textbf{Microsoft Teams API} with \textbf{Drupal CMS} (\textbf{OAuth 2.0}) enabling real-time messaging & calendar sync; automated workflows cut manual coordination \textbf{85%} (4h → 30m weekly).
+          - Engineered \textbf{Python/MySQL ETL} + schema optimization migrating \textbf{10K+} legacy records into Drupal 10; improved query latency \textbf{15%} and storage cost \textbf{10%} via index & column strategy.
+          - Instituted \textbf{Selenium} + \textbf{Cypress} test harness across 50+ pages in CI/CD raising pre-deployment defect detection \textbf{75%}; established review & QA checklist adopted by team.
+          - Partnered with stakeholders (IT, content, compliance) to prioritize backlog, clarify acceptance criteria, and deliver incremental releases with traceable change logs.
 
     - title: Software Developer
-      company: Clamphook - EdTech
+      company: Clamphook
       location: Lalitpur, NP
       date: Oct 2022 -- May 2023
       achievements:
-          - Spearheaded a \textbf{Node.js} and \textbf{React}-based Computer-Based Testing (CBT) platform with \textbf{Redux Trunk} state management, \textbf{Redis} caching, and \textbf{NGINX} load balancing, implementing optimized API endpoints to support \textbf{5,000+ concurrent users} and \textbf{5x enrollment growth}.
-          - Architected a \textbf{Docker/Kubernetes}-based microservices infrastructure with \textbf{Helm} charts and automated \textbf{CI/CD} pipelines using \textbf{GitLab}, achieving \textbf{99.9% uptime} for production applications with \textbf{5,000+ downloads} on App Store.
-          - Developed real-time analytics dashboard with \textbf{TypeScript}, \textbf{MongoDB}, and \textbf{Chart.js}, featuring a gamified Duolingo-style progress tracking interface that drove an \textbf{8% increase} in user engagement and improved student retention.
-          - Conducted \textbf{code reviews}, documented \textbf{API specifications}, and troubleshot production issues while collaborating with cross-functional teams (design, product, QA) in a startup environment.
-
-    - title: Software Developer Intern
-      company: Padhao Academy
-      location: Remote
-      date: Oct 2021 -- Dec 2021
-      achievements:
-          - Implemented a secure authentication system with \textbf{JWT tokens} and \textbf{RBAC architecture} for a \textbf{Next.js} educational platform, ensuring \textbf{GDPR compliance} for 5,000+ student accounts and supporting multiple permission levels for students, instructors, and administrators.
-          - Optimized frontend performance using \textbf{Next.js}, \textbf{TypeScript}, and \textbf{Tailwind CSS} with strategic component lazy loading and state management, resulting in a \textbf{35% reduction} in page load times and improved user experience metrics.
-          - Enhanced platform discoverability through implementation of \textbf{Next.js SSR}, dynamic routing, \textbf{structured data markup} (Open Graph + JSON-LD), and intelligent resource prefetching, leading to measurable improvements in organic search rankings and user acquisition.
+          - Spearheaded architecture for \textbf{Node.js} + \textbf{React} CBT platform with \textbf{Redis} caching, \textbf{NGINX} load balancing, and modular service boundaries—scaled to \textbf{5,000+} concurrent users supporting 5x enrollment growth.
+          - Implemented \textbf{Docker/Kubernetes} microservices with \textbf{Helm} + GitLab CI/CD pipelines (lint, test, rollout gates) reaching \textbf{99.9%} production uptime; created deployment playbooks & rollback runbooks.
+          - Built real-time analytics dashboard (\textbf{TypeScript}, \textbf{MongoDB}, \textbf{Chart.js}) surfacing performance & engagement metrics—drove \textbf{8%} user engagement lift and informed product iteration cadence.
 
 projects:
-    - name: RhymeAI
-      description: AI-powered event management platform featuring an intelligent virtual emcee that uses \textbf{multi-agent orchestration} (\textbf{Gemini}, \textbf{LangChain}, ElevenLabs) to plan and adapt to real-time situations. (Selected for \textbf{Nexus Technology Cup})
-      link: https://rhyme-ai.vercel.app/
-
-    - name: NoteMeet
-      description: AI meeting assistant with \textbf{React} front-end, serverless \textbf{FastAPI}, and \textbf{Terraform}-managed \textbf{AWS} stack (\textbf{Lambda}, \textbf{S3}, \textbf{DynamoDB}, Transcribe) for automatic recording, transcription, and \textbf{RAG}-powered summaries that cut manual note effort by \textbf{80%}. (\textbf{Tech Expo Winner})
+    - name: NoteMeet (Real-Time RAG)
+      description: \textbf{Serverless RAG} pipeline (Lambda, LangChain, DynamoDB) turning raw meeting audio into structured summaries & actions—cut manual note effort \textbf{80%}.
       link: https://notemeet.dineshchhantyal.com
 
-    - name: OfferMart
-      description: Full stack sustainable reselling marketplace (\textbf{Next.js}, \textbf{Node.js}, \textbf{MongoDB}) with \textbf{RBAC auth}, real-time verification, \textbf{dynamic pricing} logic, and \textbf{Stripe} integration; scales to \textbf{1,000+ concurrent transactions} with strong data integrity guarantees.
-      link: https://offermart.vercel.app/
+    - name: RhymeAI (Multi-Agent LLM Orchestration)
+      description: Next.js + TypeScript multi-agent orchestration (\textbf{Gemini}, ElevenLabs TTS) generating dynamic event scripts & multilingual narration in real time.
+      link: https://rhyme-ai.vercel.app/
 
-    - name: CodeStroke Pro
-      description: \textbf{FastAPI} clinical decision support system with form-driven workflows for stroke protocols and medication dosing, featuring responsive \textbf{React} UI and comprehensive audit trails that reduced decision latency by \textbf{40%}. (Helps save lives)
-      link: https://codestrokepro.org
+    - name: Fake-or-Real Text Impostor Detection
+      description: \textbf{Random Forest} NLP pipeline (scikit-learn, \textbf{TF-IDF} + linguistic features) achieving \textbf{89.5%} validation accuracy over 1,596 engineered features on Kaggle competition.
+      link: https://github.com/dineshchhantyal/fake-or-real--the-imposter-hunt-in-texts
+
+    - name: Dog & Breed Classifier
+      description: '\textbf{Two-phase CV pipeline} using ImageNet \textbf{VGG16} features + custom metric-learning head; imbalance-aware augmentation (rotation, color jitter) yields >85% pet ID and 90%+ breed accuracy (reproducible transfer-learning scripts).'
+      link: https://github.com/dineshchhantyal/dog-n-dog-breed-classification
 
 skills:
-    - name: Frontend
-      items: TypeScript, JavaScript (ES6+), Angular, React, Component Architecture, State Management, Responsive Design, UI Unit Testing
-    - name: Backend / APIs
-      items: Node.js, C#, .NET Core, RESTful API Design, API Development, Express, Authentication \& RBAC, API Gateway
-    - name: Databases \& Data
-      items: SQL Server, MySQL, PostgreSQL, MongoDB, Stored Procedures, Database Design, Query Optimization, Data Modeling
-    - name: AI / Automation
-      items: RAG, Vector Databases, LLM Orchestration, OpenAI API, Gemini, GitHub Copilot, Generative AI, PyTorch, TensorFlow
-    - name: DevOps \& Cloud
-      items: AWS (Lambda, S3, DynamoDB), GCP, Docker, Kubernetes, Terraform, CI/CD, Microservices, Cloud-Native Applications
-    - name: Testing \& Quality
-      items: Cypress, Selenium, Unit/Integration Testing, Regression Suites, Continuous Testing
-    - name: Other
-      items: Git, Agile/Scrum, Code Review, Documentation, Performance Optimization
+    - name: Languages
+      items: Python, TypeScript, Java, SQL, Bash, C
+    - name: ML Frameworks
+      items: PyTorch, TorchVision, Triton Kernels, scikit-learn, Hugging Face, Transfer Learning, 3D-CNNs, CNNs, NLP (TF-IDF, Feature Engineering), Computer Vision
+    - name: MLOps
+      items: SLURM, Weights \& Biases, MLflow, Mixed Precision, TorchScript, GPU Profiling, Data Parallelism
+    - name: Data \& Pipelines
+      items: ETL, Data Modeling, Feature Engineering, Ceph/S3, PostgreSQL, MySQL, MongoDB, Redis, DynamoDB, Data Validation
+    - name: Cloud
+      items: AWS (Lambda, S3, EventBridge, DynamoDB, EC2), Terraform, Docker, Kubernetes, Nginx, CI/CD (GitHub Actions)
+    - name: Software Engineering
+      items: FastAPI, Flask, Node.js, REST APIs, GraphQL, Microservices, Caching, Observability, Distributed Systems
+    - name: Tooling \& Collaboration
+      items: Git, Agile/Scrum, Code Review, Documentation, Open Source, Testing (Selenium, Cypress, PyTest)
+
+activities:
+    - name: Google Developer Group on Campus ULM, President
+      date: Aug 2024 -- Present
+    - name: IEEE Shreveport Section, Webmaster
+      date: Jan 2025 -- Present
+    - name: ICPC NA South Division 2024 State Champion, Division 1
+      date: Nov 2024

@@ -1,3 +1,12 @@
+# AI Processing Instructions:
+# - For LaTeX output, use '%' directly; it does not need to be escaped (e.g., as \%).
+# - In Skill name, & needs escapled (e.g., as \&)
+# - The 'summary' should be concise, with a maximum of two lines.
+# - Use tool calling to gather specific information when necessary.
+# - DONT change factual information e.g role, company, location
+# - Do not invent or assume new technologies; prioritize leveraging existing tools and libraries from the document.
+# - DONT create a new file
+
 personal:
     name: Dinesh Chhantyal
     location: New York, NY
