@@ -1,8 +1,8 @@
 personal_information:
     name: "Dinesh Chhantyal"
     address:
-        line: "Monroe, LA"
-        postal_code: "10036"
+        line: "New York, NY"
+        postal_code: "10003"
         country: "United States"
     phone:
         mobile: "+1-318-750-6383"
@@ -11,32 +11,25 @@ personal_information:
 
 recipient:
     name: "Hiring Team"
-    company: "Cambridge Mobile Telematics"
-    title: "Software Engineer II, Back End"
-    address: "Cambridge, MA"
+    company: "IXL Learning"
+    title: "Software Engineer, New Grad"
+    address: "Raleigh, NC"
 
 letter:
-    date: "August 16, 2025"
-    opening: "Dear Cambridge Mobile Telematics Hiring Team,"
+    date: "August 24, 2025"
+    opening: "Dear IXL Learning Hiring Team,"
     body: |
-        I am excited to apply for the Software Engineer II, Back End position at Cambridge Mobile Telematics. With my experience in Python development, AWS cloud services, and building scalable backend systems, I am eager to contribute to CMT's mission of making the world's roads and drivers safer through innovative technology.
+        I am thrilled to apply for the Software Engineer, New Grad position at IXL Learning. As an award-winning Full Stack Engineer with over 4 years of experience in EdTech platforms, I am passionate about leveraging technology to improve education and empower learners globally.
 
-        Based on your job requirements, I believe my technical skills and experiences align well with what you're seeking:
+        My journey in EdTech began at Padhao Academy, where I developed a secure authentication system for an educational platform, ensuring GDPR compliance for over 5,000 student accounts. I optimized frontend performance using Next.js and Tailwind CSS, reducing page load times by 35%, and implemented SEO strategies that improved user acquisition and platform discoverability.
 
-        \begin{itemize}
-            \item \textbf{Python \& Backend Development:} Throughout my career, I've developed scalable backend applications using Python, implementing complex data processing pipelines and RESTful APIs. At the University of Louisiana - Monroe, I built Python-based services that processed large volumes of data with AWS integration, significantly improving system performance and reliability.
+        At Clamphook EdTech, I spearheaded the development of a scalable Computer-Based Testing (CBT) platform using Node.js and React, supporting 5,000+ concurrent users and driving a 5x growth in enrollment. I also built real-time analytics dashboards with MongoDB and Chart.js, enhancing student engagement and retention. Collaborating with cross-functional teams, I ensured high system uptime and delivered impactful features in a fast-paced startup environment.
 
-            \item \textbf{AWS \& Containerization:} I have extensive experience with AWS services including EC2, S3, Lambda, SNS, and SQS for building robust cloud applications. I've implemented Docker containerization for consistent development and deployment environments, and created CI/CD pipelines to streamline the development process and ensure code quality.
+        My most recent EdTech contribution is NoteMeet, an AI-powered meeting assistant that automates transcription and summarization tasks using AWS serverless architecture and RAG-powered summaries. This project reduced manual note-taking effort by 80%, showcasing my ability to integrate cutting-edge technologies into user-centric solutions.
 
-            \item \textbf{Problem Solving \& Collaboration:} I thrive in solving complex technical problems through creative approaches and data-driven decision making. My experience includes translating business and functional specifications into technical solutions while collaborating closely with cross-functional teams to ensure requirements are met accurately and efficiently.
-        \end{itemize}
+        I am particularly drawn to IXL Learning’s mission of creating innovative products that positively impact millions of learners and educators. The opportunity to contribute to your diverse range of educational tools, from IXL.com to Rosetta Stone, aligns perfectly with my passion for improving education through technology. I am eager to bring my technical expertise, problem-solving skills, and collaborative mindset to your team.
 
-        I particularly value CMT's hybrid work environment and am fully comfortable with commuting to the Cambridge office three days per week. During my past roles, I've successfully navigated hybrid work arrangements with scheduled in-office collaboration days, maintaining productivity and strong team connections through clear communication channels and effective documentation practices.
+        I would welcome the opportunity to discuss how my background and experiences align with IXL Learning’s goals and how I can contribute to your impactful products.
 
-        What particularly excites me about joining Cambridge Mobile Telematics is the opportunity to contribute to technology that genuinely improves road safety and saves lives. I'm drawn to CMT's mission of using AI and IoT data to create meaningful insights about driver behavior, and I'm eager to apply my skills in backend development and data processing to help advance this important work.
-
-        I thrive in collaborative environments and have a proven track record of working effectively in cross-functional teams. My experience with Linux development, code reviews, and continuous integration practices has consistently resulted in high-quality, maintainable code—particularly important in CMT's environment where reliability and performance are critical.
-
-        I am confident that my technical skills, problem-solving abilities, and passion for making a positive impact would make me a valuable addition to your team. I welcome the opportunity to discuss how my background aligns with CMT's needs and how I can contribute to your ongoing success in making roads safer through innovative technology.
     closing: "Sincerely,"
     enclosure: "Enclosure: Resume"

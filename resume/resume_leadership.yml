@@ -16,7 +16,7 @@ personal:
     linkedin: https://linkedin.com/in/dineshchhantyal
 
 summary: |
-    \textbf{ICPC State Champion} and Award-winning Software Engineer specializing in \textbf{scalable systems}, \textbf{distributed platforms}, and \textbf{AI-driven solutions};  and \textbf{GDSC President} passionate about solving complex problems and delivering impactful software at scale.
+    \textbf{ICPC State Champion} and \textbf{creative award-winning engineer} architecting the next generation of \textbf{AI-driven applications}. Deep expertise in building \textbf{robust, high-performance distributed systems} and leading \textbf{collaborative developer communities}.
 
 education:
     - name: University of Louisiana at Monroe
@@ -37,6 +37,15 @@ experience:
           - Improved cellular classification to \textbf{0.91 F1-score} by designing a custom \textbf{spatio-temporal 3D-CNN} in \textbf{PyTorch} with domain-specific augmentation strategies and iterative label refinement for accurate tracking across \textbf{600+ timepoints} and \textbf{25K+ cells}.
           - Created \textbf{Chart-Gizmos}, an open-source visualization library integrating \textbf{Python}, \textbf{Chart.js}, and \textbf{H5Gizmos} for interactive data exploration.
 
+    - title: Lead & President
+      company: Google Developer Group – University of Louisiana Monroe
+      location: Monroe, LA
+      date: Aug 2024 – Aug 2025
+      achievements:
+          - Revitalized the campus developer community, organizing \textbf{16+ events} (including \textbf{4 major exhibitions and hackathons}) to drive a \textbf{167% growth} in active membership (from 68 to 182 members) in one year.
+          - Founded and directed the university's inaugural \textbf{TechXpo}, connecting \textbf{200+ students} with \textbf{15+ local businesses}; promotional efforts earned the university's \textbf{Best Marketing Award} and secured \textbf{\$11,000+} in funding to showcase \textbf{25+ student projects}.
+          - 'Innovated chapter engagement by launching two flagship programs: the \textbf{`` Weekly CodeClash ''''} to drive consistent participation, and the \textbf{`` IT Code Challenge ''''}, a partnership with university IT that tasked students with solving real-world campus technical problems.'
+
     - title: Software Engineer
       company: University of Louisiana - Monroe
       location: Monroe, LA
@@ -56,18 +65,19 @@ experience:
           - Developed real-time analytics dashboard with \textbf{TypeScript}, \textbf{MongoDB}, and \textbf{Chart.js}, featuring a gamified Duolingo-style progress tracking interface that drove an \textbf{8% increase} in user engagement and improved student retention.
           - Conducted \textbf{code reviews}, documented \textbf{API specifications}, and troubleshot production issues while collaborating with cross-functional teams (design, product, QA) in a startup environment.
 
-    - title: Software Developer Intern
-      company: Padhao Academy
-      location: Remote
-      date: Oct 2021 -- Dec 2021
-      achievements:
-          - Implemented a secure authentication system with \textbf{JWT tokens} and \textbf{RBAC architecture} for a \textbf{Next.js} educational platform, ensuring \textbf{GDPR compliance} for 5,000+ student accounts and supporting multiple permission levels for students, instructors, and administrators.
-          - Optimized frontend performance using \textbf{Next.js}, \textbf{TypeScript}, and \textbf{Tailwind CSS} with strategic component lazy loading and state management, resulting in a \textbf{35% reduction} in page load times and improved user experience metrics.
-          - Enhanced platform discoverability through implementation of \textbf{Next.js SSR}, dynamic routing, \textbf{structured data markup} (Open Graph + JSON-LD), and intelligent resource prefetching, leading to measurable improvements in organic search rankings and user acquisition.
+    # - title: Software Developer Intern
+    #   company: Padhao Academy
+    #   location: Remote
+    #   date: Oct 2021 -- Dec 2021
+    #   achievements:
+    #       - Implemented a secure authentication system with \textbf{JWT tokens} and \textbf{RBAC architecture} for a \textbf{Next.js} educational platform, ensuring \textbf{GDPR compliance} for 5,000+ student accounts and supporting multiple permission levels for students, instructors, and administrators.
+    #       - Optimized frontend performance using \textbf{Next.js}, \textbf{TypeScript}, and \textbf{Tailwind CSS} with strategic component lazy loading and state management, resulting in a \textbf{35% reduction} in page load times and improved user experience metrics.
+    #       - Enhanced platform discoverability through implementation of \textbf{Next.js SSR}, dynamic routing, \textbf{structured data markup} (Open Graph + JSON-LD), and intelligent resource prefetching, leading to measurable improvements in organic search rankings and user acquisition.
 
 projects:
     - name: NoteMeet
-      description: AI meeting assistant with \textbf{Next.js}, serverless \textbf{FastAPI}, and \textbf{Terraform}-managed \textbf{AWS} stack (\textbf{Lambda}, \textbf{S3}, \textbf{DynamoDB}, Transcribe) for automatic recording, transcription, and \textbf{RAG}-powered summaries that cut manual note effort by \textbf{80%}. (\textbf{Tech Expo Winner})
+      description: |
+          Highly distributed AI meeting assistant leveraging a \textbf{Next.js},and a \textbf{Terraform-managed AWS stack} (\textbf{Lambda, S3, DynamoDB, Transcribe}) to enable automatic recording, transcription, and \textbf{RAG-powered summaries}. The system's distributed architecture reduced manual note-taking effort by \textbf{80%} and ensured scalability and reliability. (\textbf{Tech Expo Winner})
       link: https://notemeet.dineshchhantyal.com
 
     - name: RhymeAI

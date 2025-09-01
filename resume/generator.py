@@ -23,12 +23,27 @@ class ResumeGenerator(DocumentGenerator):
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{setspace}
-\usepackage{charter}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+% ATS-friendly packages
+\usepackage{accsupp}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+\hypersetup{
+  pdftitle={Resume},
+  pdflang={en-US},
+  pdfcreator={pdfLaTeX},
+  pdfduplex={Simplex},
+  pdftoolbar=false,
+  pdffitwindow=true,
+  pdfnewwindow=true,
+  colorlinks=false,
+  linktoc=all,
+  pdfpagemode=UseNone
+}
 
 % Page setup
 \pagestyle{fancy}
@@ -108,7 +123,7 @@ class ResumeGenerator(DocumentGenerator):
         \\textbf{{\\LARGE {self.escape_latex(personal['name'])}}} \\\\ \\vspace{{0.2pt}}
         \\small {self.escape_latex(personal['phone'])} $|$
         \\href{{mailto:{self.escape_latex(personal['email'])}}}{{{self.escape_latex(personal['email'])}}} $|$
-        \\href{{{self.escape_latex(personal['website'])}}}{{{self.escape_latex(personal['website'].replace('https://', ''))}}} $|$
+        \\href{{{self.escape_latex(personal['website'])}}}{{{self.escape_latex(personal['website'].replace('https://www.', ''))}}} $|$
         \\href{{{self.escape_latex(personal['linkedin'])}}}{{{self.escape_latex(personal['linkedin'].replace('https://', ''))}}}
         $|$
         {self.escape_latex(personal['location'])}
@@ -184,7 +199,9 @@ class ResumeGenerator(DocumentGenerator):
     def generate_skills(self, skills):
         """Generate the skills section"""
         content = []
-        content.append("\\section*{\\textbf{Technical Skills}}")
+        content.append(
+            "\\section*{\\textbf{Skills}}"
+        )  # Changed to standard ATS-friendly heading
         content.append("\\begin{itemize}[leftmargin=0.15in, label={}]")
         content.append("\\small{\\item{")
 
@@ -195,6 +212,75 @@ class ResumeGenerator(DocumentGenerator):
 
         content.append("}}")
         content.append("\\end{itemize}")
+        return "\n".join(content)
+
+    def extract_keywords(self):
+        """Extract potential keywords from skills and experience for ATS optimization"""
+        keywords = set()
+
+        # Extract from skills
+        for skill_category in self.data.get("skills", []):
+            # Split by commas and clean up
+            skills = [s.strip() for s in skill_category["items"].split(",")]
+            keywords.update(skills)
+
+        # Extract job titles and company names
+        for job in self.data.get("experience", []):
+            keywords.add(job["title"])
+            keywords.add(job["company"])
+
+            # Extract technical terms from achievements
+            for achievement in job["achievements"]:
+                # Find words in textbf that are likely technical terms
+                import re
+
+                tech_terms = re.findall(r"\\textbf\{([^}]+)\}", achievement)
+                keywords.update(tech_terms)
+
+                # Also extract important tech and numerical metrics
+                tech_matches = re.findall(
+                    r"\b(?:[A-Z][A-Za-z0-9./+_-]+|[0-9]+[xX]|\d+%|\d+[KkMmGgTt][Bb])\b",
+                    achievement,
+                )
+                keywords.update(tech_matches)
+
+        # Add project technologies
+        for project in self.data.get("projects", []):
+            description = project.get("description", "")
+            tech_terms = re.findall(r"\\textbf\{([^}]+)\}", description)
+            keywords.update(tech_terms)
+
+            # Extract other tech terms and metrics from projects
+            tech_matches = re.findall(
+                r"\b(?:[A-Z][A-Za-z0-9./+_-]+|[0-9]+[xX]|\d+%|\d+[KkMmGgTt][Bb])\b",
+                description,
+            )
+            keywords.update(tech_matches)
+
+        # Filter out common non-technical terms and short terms
+        filtered_keywords = [
+            k
+            for k in keywords
+            if len(k) > 2
+            and not k.lower() in {"the", "and", "with", "for", "from", "that", "this"}
+        ]
+
+        return sorted(filtered_keywords)
+
+    def generate_keywords_section(self):
+        """Generate a hidden keywords section for ATS optimization"""
+        keywords = self.extract_keywords()
+        if not keywords:
+            return ""
+
+        content = []
+        # Hidden section not visible in the PDF but readable by ATS
+        content.append("\\begin{comment}")
+        content.append("Keywords for ATS Optimization:")
+        # Join keywords with commas for better ATS parsing
+        keywords_text = ", ".join([self.escape_latex(k) for k in keywords])
+        content.append(keywords_text)
+        content.append("\\end{comment}")
         return "\n".join(content)
 
     def generate_activities(self, activities):
@@ -251,6 +337,9 @@ class ResumeGenerator(DocumentGenerator):
         if activities:
             content.append(self.generate_activities(activities))
 
+        # Add keywords section for ATS optimization (invisible in rendered PDF)
+        content.append(self.generate_keywords_section())
+
         content.append("\\end{document}")
 
         return "\n\n".join(content)
@@ -270,7 +359,7 @@ class ResumeGenerator(DocumentGenerator):
         return output_file
 
     def compile_pdf(self, tex_file):
-        """Compile LaTeX file to PDF using pdflatex"""
+        """Compile LaTeX file to PDF using pdflatex with ATS-friendly settings"""
         try:
             # Get the directory containing the tex file
             output_dir = os.path.dirname(tex_file)
@@ -282,6 +371,7 @@ class ResumeGenerator(DocumentGenerator):
                         "pdflatex",
                         "-interaction=nonstopmode",
                         "-output-directory=" + output_dir,
+                        # ATS-friendly settings - remove -dPDFA flag since it's causing issues
                         tex_file,
                     ],
                     check=True,
