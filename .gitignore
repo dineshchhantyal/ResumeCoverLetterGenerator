@@ -9,3 +9,6 @@ venv/
 *.aux
 *.log
 applications/
+
+# Keep the rendered demo PDFs under examples/ tracked
+!examples/**/*.pdf

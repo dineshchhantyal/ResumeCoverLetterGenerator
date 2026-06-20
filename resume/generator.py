@@ -360,13 +360,14 @@ class ResumeGenerator(DocumentGenerator):
         content.append("\\section*{\\textbf{Certifications}}")
         content.append("\\resumeItemListStart{}")
         for cert in certifications:
-            title = self.escape_latex(cert["title"])
-            issuer = self.escape_latex(cert["issuer"])
-            date = self.escape_latex(cert["date"])
+            title = self.escape_latex(cert.get("title") or cert.get("name", ""))
+            issuer = self.escape_latex(cert.get("issuer", ""))
+            date = self.escape_latex(cert.get("date", ""))
 
+            issuer_part = f", {issuer}" if issuer else ""
             formatted_cert = (
                 f"\\resumeItem{{"
-                f"\\textbf{{{title}}} -- {issuer} "
+                f"\\textbf{{{title}}}{issuer_part} "
                 f"\\hfill {date}"
                 f"}}"
             )

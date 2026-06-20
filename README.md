@@ -76,6 +76,13 @@ This project is agent-first. After you clone it, you mostly just talk to Claude 
 
 Prefer to do it by hand? Every step also works manually: edit `profile/about_candidate.yml` yourself and run `python main.py --company "Example Corp" --role "Software Engineer" --type both`. See [docs/SETUP.md](docs/SETUP.md).
 
+## Demo
+
+See the agent in action without installing anything:
+
+- [DEMO.md](DEMO.md) is an annotated end-to-end transcript: onboarding, scouting, tailoring, submitting, and tracking.
+- [examples/](examples/) holds 8 complete worked applications for the demo candidate Jane Doe. The same profile is tailored into a Backend, Frontend, Full Stack, Machine Learning, Data, Platform, Cloud, and New Grad resume and cover letter, each with the rendered PDF. See [examples/README.md](examples/README.md).
+
 ## Requirements
 
 - Python 3.8 or newer
