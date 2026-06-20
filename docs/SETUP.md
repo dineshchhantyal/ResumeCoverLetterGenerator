@@ -108,7 +108,9 @@ pip install -r requirements.txt
 
 Your entire candidate identity lives in one file: `profile/about_candidate.yml`. This is the single source of truth. The agent will never claim anything about you that is not written in this file, so accuracy and honesty here directly control what shows up on every resume, cover letter, and application form.
 
-Open it in your editor:
+**The easy way: let Claude interview you.** Once you open the project in Claude Code (step 5), just say `Set me up`. The profile-setup agent notices the file is still the placeholder, asks you about your experience, education, skills, and work authorization, and writes the profile for you. You can skip the manual edit below.
+
+**The manual way.** Open it in your editor:
 
 ```bash
 ${EDITOR:-nano} profile/about_candidate.yml
@@ -138,25 +140,16 @@ Fill in the `work_authorization` fields honestly. The agent uses these to decide
 Run the generator to confirm Python and `pdflatex` work together end to end:
 
 ```bash
-python main.py
+python main.py --company "Example Corp" --role "Software Engineer" --type resume
 ```
 
-It prompts you interactively, in this order:
+The command takes three options:
 
-1. **Company name** (enter a sample, for example `Example Corp`)
-2. **Role title** (enter a sample, for example `Software Engineer`)
-3. A menu where you choose an output:
-   - `1` = resume
-   - `2` = cover letter
-   - `3` = both
+1. `--company` the company name (for example `Example Corp`)
+2. `--role` the role title (for example `Software Engineer`)
+3. `--type` the output: `resume`, `coverletter`, or `both` (defaults to `both`)
 
-Choose `1` to generate just the resume.
-
-You can also run it non-interactively by piping the answers in (company, role, an empty line for any intermediate prompt, then the menu choice):
-
-```bash
-printf "Example Corp\nSoftware Engineer\n\n1\n" | python main.py
-```
+Use `--type resume` to generate just the resume for this first test.
 
 When it finishes, the PDF lands under the `applications/` directory, organized by company:
 

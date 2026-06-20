@@ -10,6 +10,7 @@ This repo is a Claude Code "job application agent": a set of subagents, prompts,
 | Resume generator | `resume/generator.py`, `main.py` | Renders a resume YAML into LaTeX and then a PDF. |
 | Cover letter generator | `coverletter/generator.py` | Renders a cover letter YAML into a matching PDF. |
 | Resume variants | `resume/resume.yml`, `resume/resume_ml.yml`, `resume/resume_sw.yml` | The working resume plus role slanted starting templates. |
+| profile-setup subagent | `.claude/agents/profile-setup.md` | Interviews the user on first run and writes `profile/about_candidate.yml`. |
 | job-scout subagent | `.claude/agents/job-scout.md` | Searches job boards and company career pages for fresh, matching roles. |
 | resume-builder subagent | `.claude/agents/resume-builder.md` | Copies a variant, tailors it to a job description, edits `resume/resume.yml`. |
 | application-submitter subagent | `.claude/agents/application-submitter.md` | Drives the ATS form via the Playwright MCP to submit the application. |
@@ -76,7 +77,7 @@ Top level keys consumed by the generator:
 
 ## How Claude Code discovers the agents
 
-- **Subagents** live in `.claude/agents/`. Each `*.md` file defines one subagent (its name, when to use it, and its tools). Claude Code loads them at startup, so the orchestrator can delegate to `job-scout`, `resume-builder`, or `application-submitter` without any extra wiring.
+- **Subagents** live in `.claude/agents/`. Each `*.md` file defines one subagent (its name, when to use it, and its tools). Claude Code loads them at startup, so the orchestrator can delegate to `profile-setup`, `job-scout`, `resume-builder`, or `application-submitter` without any extra wiring.
 - **Project instructions** live in `CLAUDE.md` at the repo root. Claude Code reads it automatically and treats it as standing behavior rules for this project. `WORKFLOW.md` holds the longer per application playbook the agents reference.
 - **MCP servers** (such as Playwright) are declared in the project MCP config and surface their tools to whichever subagent is allowed to use them, here the `application-submitter`.
 

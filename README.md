@@ -53,11 +53,28 @@ Because every document traces back to your single profile file, the agent stays 
 
 ## Quick start
 
-1. **Install prerequisites and Claude Code.** Set up Python, a LaTeX distribution, Node.js, and the Claude Code CLI. See [docs/SETUP.md](docs/SETUP.md).
-2. **Clone and install dependencies.** Clone the repository and run `pip install -r requirements.txt`. See [docs/SETUP.md](docs/SETUP.md).
-3. **Fill in your profile.** Edit `profile/about_candidate.yml` with your real experience, projects, skills, and preferences. See [docs/USAGE.md](docs/USAGE.md).
-4. **Generate your first resume.** Run `python main.py` to render a PDF and confirm the pipeline works end to end. See [docs/USAGE.md](docs/USAGE.md).
-5. **Run the workflow in Claude Code.** Open the repository in Claude Code, install the Playwright MCP, and ask Claude to run the workflow. See [docs/PLAYWRIGHT_MCP.md](docs/PLAYWRIGHT_MCP.md) and [WORKFLOW.md](WORKFLOW.md).
+This project is agent-first. After you clone it, you mostly just talk to Claude and it drives the setup for you.
+
+1. **Install Claude Code and the prerequisites.** Install the Claude Code CLI, Python 3.8+, a LaTeX distribution (TeX Live or MiKTeX), and Node.js. See [docs/SETUP.md](docs/SETUP.md).
+2. **Clone the repository.**
+   ```bash
+   git clone https://github.com/dineshchhantyal/job-application-agent.git
+   cd job-application-agent
+   pip install -r requirements.txt
+   ```
+3. **Start the agent.** From inside the repo, launch Claude Code:
+   ```bash
+   claude
+   ```
+   Allow it to run tools when prompted. To let it work without approving each action, start it with `claude --dangerously-skip-permissions` (it can then read, edit, and run commands on its own, so use this only in a repo you trust).
+4. **Let the agent set you up.** Tell it:
+   ```
+   Set me up.
+   ```
+   Claude reads `CLAUDE.md`, notices the profile is still the placeholder, and interviews you to build your real `profile/about_candidate.yml`. It then generates a first resume to confirm the pipeline works, walks you through installing the Playwright MCP, and is ready to run the application workflow.
+5. **Run the workflow.** Ask Claude to scout roles, tailor your resume to a job, and help submit. See [docs/USAGE.md](docs/USAGE.md), [docs/PLAYWRIGHT_MCP.md](docs/PLAYWRIGHT_MCP.md), and [WORKFLOW.md](WORKFLOW.md).
+
+Prefer to do it by hand? Every step also works manually: edit `profile/about_candidate.yml` yourself and run `python main.py --company "Example Corp" --role "Software Engineer" --type both`. See [docs/SETUP.md](docs/SETUP.md).
 
 ## Requirements
 

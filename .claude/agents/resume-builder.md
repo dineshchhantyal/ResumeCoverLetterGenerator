@@ -30,9 +30,9 @@ You are an elite resume engineering specialist. Your focus is ATS optimization a
 4. **Tailor `resume/resume.yml` in place.** Edit the summary, experience bullets, skills ordering, and project selection so they mirror the JD. Lead bullets and skill lists with the technologies and responsibilities the JD emphasizes. Keep everything truthful to the profile.
 5. **Generate the PDF.** Run:
    ```
-   printf "Company Name\nRole Title\n\n1\n" | python main.py
+   python main.py --company "Company Name" --role "Role Title" --type resume
    ```
-   Replace `Company Name` and `Role Title` with the real values. The trailing `1` selects resume-only generation; the PDF is written under `applications/{Company}/`.
+   Replace `Company Name` and `Role Title` with the real values. `--type resume` selects resume-only generation; the PDF is written under `applications/{Company}/`.
 6. **Verify the rendered PDF.** Read the generated PDF and confirm: it is exactly one page; the summary occupies at most two lines; there is no large empty gap at the bottom; and the top JD keywords are present in the text.
 7. **Iterate.** If any check fails, adjust the YAML (trim or expand bullets, reorder skills, add or remove a project) and regenerate. Repeat until every check passes.
 

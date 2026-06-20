@@ -154,7 +154,7 @@ time on more applications instead.
 Run the generator from the repo root:
 
 ```
-printf "Company Name\nRole Title\n\n3\n" | python main.py
+python main.py --company "Company Name" --role "Role Title" --type both
 ```
 
 The piped input answers the prompts in order: company name, role title, a blank

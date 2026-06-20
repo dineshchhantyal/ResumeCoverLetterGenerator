@@ -59,8 +59,9 @@ Keeping the log current is what prevents duplicate applications to the same role
 
 ## How subagents work
 
-The repo ships three specialized subagents:
+The repo ships four specialized subagents:
 
+- **profile-setup** interviews you on first run and writes `profile/about_candidate.yml`. Say `Set me up` to trigger it.
 - **job-scout** finds roles that match your profile.
 - **resume-builder** tailors and generates your resume and cover letter.
 - **application-submitter** opens the ATS page and fills the form using the Playwright MCP.
