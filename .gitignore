@@ -1,0 +1,11 @@
+output/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+*.pdf
+*.tex
+*.aux
+*.log
+applications/

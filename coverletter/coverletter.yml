@@ -1,0 +1,34 @@
+# BUSINESS COVER LETTER FORMATTING RULES:
+# IMPORTANT: Do not use dashes (-) or em-dashes in sentences. Use periods, commas, or restructure sentences instead.
+#
+# personal_information: your name, address, phone, email, homepage
+# recipient: name, company, title, address
+# letter: date, opening greeting, body paragraphs, enclosure
+
+personal_information:
+  name: "Jane Doe"
+  address:
+    line: "San Francisco, CA"
+    postal_code: "94105"
+    country: "United States"
+  phone:
+    mobile: "+1-555-0100"
+  email: "jane.doe@example.com"
+  homepage: "https://www.example.com"
+
+recipient:
+  name: "Hiring Team"
+  company: "Example Corp"
+  title: "Software Engineer"
+  address: "San Francisco, CA"
+
+letter:
+  date: "January 1, 2025"
+  opening: "Dear Example Corp Team:"
+  enclosure: "Enclosure: Resume"
+  body: |
+    I am excited to apply for the Software Engineer role at Example Corp. I build production web applications and enjoy solving real problems for users at scale.
+
+    I am a full stack engineer with experience in Python, TypeScript, FastAPI, and React. I have shipped platforms serving thousands of users, built data pipelines processing millions of records, and designed reliable APIs with strong test coverage. I am proficient with Docker, Kubernetes, and AWS.
+
+    I would welcome the chance to contribute to your team. Please reach me at +1-555-0100 or jane.doe@example.com.
